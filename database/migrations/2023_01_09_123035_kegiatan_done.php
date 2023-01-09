@@ -16,12 +16,12 @@ return new class extends Migration
     {
 
         Schema::create($this->table, function (Blueprint $table) {
-            $table->increments('Id');
+            $table->increments('Id', 15);
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
             $table->foreign('PengevaluasiId')->references('Username')->on('user');
             $table->dateTime('TglMulai');
             $table->dateTime('TglSelesai');
-            $table->string('BuktiTerlaksana');
+            $table->binary('BuktiTerlaksana');
             //
         });
 

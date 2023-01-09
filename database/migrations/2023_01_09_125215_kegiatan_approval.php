@@ -17,10 +17,10 @@ return new class extends Migration
     {
 
         Schema::create($this->table, function (Blueprint $table) {
-            $table->increments('Id');
+            $table->increments('Id', 15);
             $table->foreign('PengevaluasiId')->references('Username')->on('user');
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
-            $table->string('Status');
+            $table->string('Status', 30);
             //
         });
 
