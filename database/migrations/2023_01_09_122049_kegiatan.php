@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('NamaKegiatan', 50);
             $table->dateTime('TglMulai');
             $table->dateTime('TglSelesai');
-            $table->string('Status', 30)->startingValue('Belum disetujui');
+            $table->string('Status', 30);
             //
         });
 
