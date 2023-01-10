@@ -20,7 +20,7 @@ return new class extends Migration
             $table->increments('Id', 15);
             $table->foreign('PengevaluasiId')->references('Username')->on('user');
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
-            $table->string('Status', 30);
+            $table->foreign('Status', 30)->references('Status')->on('kegiatan');
             //
         });
 
