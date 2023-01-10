@@ -17,6 +17,7 @@ class kegiatanDone extends Model
 
     protected $fillable = [
         'Id',
+        'KegiatanId',
         'PengevaluasiId',
         'TglMulai',
         'TglSelesai',

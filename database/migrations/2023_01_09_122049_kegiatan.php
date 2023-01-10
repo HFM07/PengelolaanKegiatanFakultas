@@ -17,7 +17,7 @@ return new class extends Migration
 
         Schema::create($this->table , function (Blueprint $table) {
             $table->increments('Id', 15);
-            $table->foreign('PembuatId')->references('Username')->on('User');
+            $table->foreign('PembuatId')->references('Username')->on('user');
             $table->string('NamaKegiatan', 50);
             $table->dateTime('TglMulai');
             $table->dateTime('TglSelesai');

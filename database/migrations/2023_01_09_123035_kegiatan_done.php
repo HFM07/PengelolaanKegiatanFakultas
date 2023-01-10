@@ -17,8 +17,8 @@ return new class extends Migration
 
         Schema::create($this->table, function (Blueprint $table) {
             $table->increments('Id', 15);
-            $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
-            $table->foreign('PengevaluasiId')->references('Username')->on('user');
+            $table->foreign('KegiatanId', 15)->references('Id')->on('kegiatan');
+            $table->foreign('PengevaluasiId', 15)->references('Username')->on('user');
             $table->dateTime('TglMulai');
             $table->dateTime('TglSelesai');
             $table->binary('BuktiTerlaksana');
