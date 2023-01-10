@@ -7,5 +7,9 @@ use App\Models\kegiatanApproval;
 
 class kegiatanApprovalController extends Controller
 {
-    //
+    public function index()
+    {
+        $kegiatanApproval = kegiatanApproval::all();
+        return view('kegiatanApproval', ['kegiatanApproval'=>$kegiatanApproval]);
+    }
 }
