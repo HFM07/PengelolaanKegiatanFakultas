@@ -23,4 +23,14 @@ class kegiatanDone extends Model
         'TglSelesai',
         'BuktiTerlaksana'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(user::class, 'PengevaluasiId', 'Username', 'user');
+    }
+
+    public function kegiatan()
+    {
+        return $this->belongsTo(kegiatan::class, 'KegiatanId', 'Id', 'kegiatan');
+    }
 }

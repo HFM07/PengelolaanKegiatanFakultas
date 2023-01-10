@@ -23,4 +23,9 @@ class kegiatan extends Model
         'TglSelesai',
         'Status'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(user::class, 'PembuatId', 'Username', 'user');
+    }
 }

@@ -21,4 +21,14 @@ class kegiatanApproval extends Model
         'KegiatanId',
         'Status'
     ];
+
+    public function kegiatan()
+    {
+        return $this->belongsTo(kegiatan::class, 'KegiatanId', 'Id', 'kegiatan');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(user::class, 'PengevaluasiId', 'Username', 'user');
+    }
 }
