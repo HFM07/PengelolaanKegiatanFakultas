@@ -16,7 +16,8 @@ return new class extends Migration
     {
 
         Schema::create($this->table , function (Blueprint $table) {
-            $table->increments('Id', 15);
+            $table->increments('Id');
+            $table->unsignedInteger('PembuatId');
             $table->foreign('PembuatId')->references('Username')->on('user');
             $table->string('NamaKegiatan', 50);
             $table->dateTime('TglMulai');
