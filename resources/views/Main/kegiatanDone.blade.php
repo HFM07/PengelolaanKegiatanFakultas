@@ -40,9 +40,11 @@
                 @foreach ($kegiatan_done as $item => $i)
                     <tr>
                         <td>{{ $item + 1 }}</td>
-                        <td>{{ $i->kegiatan_approval->user->Username }}</td>
-                        <td>{{ $i->kegiatan->NamaKegiatan }}</td>
-                        <td>{{ $i->Bukti Terlaksana }}</td>
+                        <td>{{ $i->kegiatan->Id }}</td>
+                        <td>{{ $i->user->Username }}</td>
+                        <td>{{ $i->TglMulai }}</td>
+                        <td>{{ $i->TglSelesai }}</td>
+                        <td>{{ $i->BuktiTerlaksana }}</td>
                         <td>
                             <a href="{{ route('kegiatan_done') }}/{{ $i->id }}/edit" class="btn btn-warning">Edit</a>
                             <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->id }}">Hapus</a>

@@ -29,7 +29,7 @@
                     <th>No</th>
                     <th>Id</th>
                     <th>Pembuat Id</th>
-                    <th>Nama Kegiatan</th>
+                    <th>KegiatanId</th>
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Selesai</th>
                     <th>Status</th>
@@ -37,12 +37,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($Kegiatan as $item => $i)
+                @foreach ($kegiatanApproval as $item => $i)
                     <tr>
                         <td>{{ $item + 1 }}</td>
                         <td>{{ $i->Id }}</td>
-                        <td>{{ $i->User->Username }}</td>
-                        <td>{{ $i->Nama Kegiatan }}</td>
+                        <td>{{ $i->user->Username }}</td>
+                        <td>{{ $i->kegiatan->Id }}</td>
+                        <td>{{ $i->TglMulai }}</td>
+                        <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
                             <a href="{{ route('kegiatan') }}/{{ $i->id }}/edit" class="btn btn-warning">Edit</a>
