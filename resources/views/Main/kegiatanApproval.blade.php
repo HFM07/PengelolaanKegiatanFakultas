@@ -37,7 +37,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kegiatanApproval as $item => $i)
+                @foreach ($kegiatan_approval as $item => $i)
                     <tr>
                         <td>{{ $item + 1 }}</td>
                         <td>{{ $i->Id }}</td>
