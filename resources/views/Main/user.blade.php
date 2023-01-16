@@ -28,10 +28,10 @@
                 <tr>
                     <th>No</th>
                     <th>Username</th>
-                    <th>Password</th>
                     <th>Email</th>
+                    <th>Password</th>
                     <th>Hak Akses</th>
-                    <th>Aksi<th/>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,6 +41,7 @@
                         <td>{{ $i->Username }}</td>
                         <td>{{ $i->Email }}</td>
                         <td>{{ $i->Password }}</td>
+                        <td>{{ $i->HakAkses }}</td>
                         <td>
                             <a href="{{ route('user') }}/{{ $i->id }}/edit" class="btn btn-warning">Edit</a>
                             <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->id }}">Hapus</a>

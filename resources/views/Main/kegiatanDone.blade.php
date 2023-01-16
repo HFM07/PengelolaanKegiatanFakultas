@@ -33,13 +33,14 @@
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Selesai</th>
                     <th>Bukti Terlaksana</th>
-                    <th>Aksi<th/>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($kegiatan_done as $item => $i)
                     <tr>
                         <td>{{ $item + 1 }}</td>
+                        <td>{{ $i->Id }}</td>
                         <td>{{ $i->kegiatan->Id }}</td>
                         <td>{{ $i->user->Username }}</td>
                         <td>{{ $i->TglMulai }}</td>
