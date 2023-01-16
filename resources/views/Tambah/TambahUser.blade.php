@@ -49,19 +49,19 @@
     <form action="{{ route('user.tambahUser') }}" method="POST">
         @csrf
         <div class="mb-3 row">
-            <label for="Username" class="form-label text-light">Username</label>
+            <label for="Username" class="form-label text-dark">Username</label>
             <input type="text" class="Textbox text-dark" name='Username' id="Username">
         </div>
         <div class="mb-3 row">
-            <label for="Password" class="form-label text-light">Password</label>
+            <label for="Password" class="form-label text-dark">Password</label>
             <input type="Password" class="Textbox text-dark" name='Password' id="Password">
         </div>
         <div class="mb-3 row">
-            <label for="Email" class="form-label text-light">Email</label>
+            <label for="Email" class="form-label text-dark">Email</label>
             <input type="Email" class="Textbox text-dark" name='Email' id="Email">
         </div>
         <div class="mb-3 row">
-            <label for="HakAkses" class="form-label text-light">Hak Akses</label>
+            <label for="HakAkses" class="form-label text-dark">Hak Akses</label>
             <input type="HakAkses" class="Textbox text-dark" name='HakAkses' id="HakAkses">
         </div>
         </div>

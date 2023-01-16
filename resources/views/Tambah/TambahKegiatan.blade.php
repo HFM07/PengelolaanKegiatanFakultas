@@ -49,23 +49,23 @@
     <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
         @csrf
         <div class="mb-3 row">
-            <label for="Id" class="form-label text-light">Id</label>
+            <label for="Id" class="form-label text-dark">Id</label>
             <input type="text" class="Textbox text-dark" name='Id' id="Id">
         </div>
         <div class="mb-3 row">
-            <label for="NamaKegiatan" class="form-label text-light">Nama Kegiatan</label>
+            <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
             <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
         </div>
         <div class="mb-3 row">
-            <label for="TglMulai" class="col-sm-2 col-form-label text-light">Tanggal Mulai</label>
+            <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>
             <input type="date" class="Textbox text-dark" name='TglMulai' id="TglMulai">
         </div>
         <div class="mb-3 row">
-            <label for="TglSelesai" class="col-sm-2 col-form-label text-light">Tanggal Selesai</label>
+            <label for="TglSelesai" class="col-sm-2 col-form-label text-dark">Tanggal Selesai</label>
             <input type="date" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
         </div>
         <div class="mb-3 row">
-            <label for="Status" class="col-sm-2 col-form-label text-light">Status</label>
+            <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
             <input type="text" class="Textbox text-dark" name="Status" id="Status">
         </div>
         </div>
