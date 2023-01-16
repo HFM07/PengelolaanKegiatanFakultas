@@ -16,7 +16,6 @@
                 Data User
             </h1>
         </div>
-        <a href="{{ route('user.create') }}" class="btn btn-primary mb-4">Tambah User</a>
         <table class="table table-hover table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -37,7 +36,7 @@
                         <td>{{ $i->Password }}</td>
                         <td>{{ $i->HakAkses }}</td>
                         <td>
-                            <a href="{{ route('user') }}/{{ $i->Username }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('user') }}/{{ $i->Username }}/getEditUser" class="btn btn-warning">Edit</a>
                             <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->Username }}">Hapus</a>
                         </td>
                     </tr>

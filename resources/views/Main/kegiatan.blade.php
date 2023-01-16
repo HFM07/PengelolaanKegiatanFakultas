@@ -17,7 +17,6 @@
                 Data Kegiatan
             </h1>
         </div>
-        <a href="{{ route('kegiatan.create') }}" class="btn btn-primary mb-4">Tambah Kegiatan</a>
         <table class="table table-hover table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -42,7 +41,7 @@
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
-                            <a href="{{ route('kegiatan') }}/{{ $i->Id }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('kegiatan') }}/{{ $i->Id }}/getEditKegiatan" class="btn btn-warning">Edit</a>
                             <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->Id }}">Hapus</a>
                         </td>
                     </tr>

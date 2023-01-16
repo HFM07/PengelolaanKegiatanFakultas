@@ -16,7 +16,6 @@
                 Data Kegiatan
             </h1>
         </div>
-        <a href="{{ route('kegiatan.create') }}" class="btn btn-primary mb-4">Tambah Kegiatan</a>
         <table class="table table-hover table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -31,7 +30,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kegiatan_approval as $item => $i)
+                @foreach ($kegiatanApproval as $item => $i)
                     <tr>
                         <td>{{ $item + 1 }}</td>
                         <td>{{ $i->Id }}</td>
@@ -41,7 +40,7 @@
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
-                            <a href="{{ route('kegiatan') }}/{{ $i->Id }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('kegiatan') }}/{{ $i->Id }}/getEditKegiatanApproval" class="btn btn-warning">Edit</a>
                             <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->Id }}">Hapus</a>
                         </td>
                     </tr>
@@ -85,7 +84,7 @@
                         )
                         $.ajax({
                             type: "DELETE",
-                            url: "{{ route('kegiatan') }}/" + $(this).data('Id') +
+                            url: "{{ route('kegiatanApproval') }}/" + $(this).data('Id') +
                                 "/hapus",
                             success: function(response) {
                                 location.reload();

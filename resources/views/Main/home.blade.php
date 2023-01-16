@@ -11,11 +11,11 @@
 <body>
     <div class="container">
         <ul>
-            <li><a href="/"></a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/Main/user">User</a></li>
-            <li><a href="/Main/kegiatan"></a>Kegiatan</li>
-            <li><a href="/Main/kegiatanApproval"></a>Kegiatan Approval</li>
-            <li><a href="/Main/kegiatanDone"></a>Kegiatan Done</li>
+            <li><a href="/Main/kegiatan">Kegiatan</a></li>
+            <li><a href="/Main/kegiatanApproval">Kegiatan Approval</a></li>
+            <li><a href="/Main/kegiatanDone">Kegiatan Done</a></li>
         </ul>
     </div>
 </body>
