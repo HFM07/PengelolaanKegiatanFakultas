@@ -10,7 +10,7 @@ class userController extends Controller
     public function index()
     {
         $user = user::all();
-        return view('user', ['user'=>$user]);
+        return view('Main/user', ['user'=>$user]);
     }
 
     public function hapusUser($username)

@@ -19,7 +19,7 @@ class kegiatanApprovalController extends Controller
     public function hapusKegiatanApproval($Id)
     {
         kegiatanApproval::table('kegiatan_approval') -> where('kegiatan_approval', $Id) -> delete();
-        return redirect("Main/kegiatan_approval");
+        return redirect("Main/kegiatanApproval");
     }
 
     public function tampilTambahKegiatanApproval()

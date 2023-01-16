@@ -43,7 +43,7 @@ class kegiatanController extends Controller
 
     public function getEditKegiatan($Id)
     {
-        $kegiatan = kegiatan::table('kegiatan_approval') -> where('Id', $Id) -> get();
+        $kegiatan = kegiatan::table('kegiatan') -> where('Id', $Id) -> get();
         return view('Edit/EditKegiatan', ['kegiatan' => $kegiatan]);
     }
 

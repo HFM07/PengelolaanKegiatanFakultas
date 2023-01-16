@@ -1,0 +1,159 @@
+body{
+    background: url(Background-dark.jpg);
+    color: black;
+}
+.Menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    padding: 14px;
+}
+.Menu ul{
+    list-style: none;
+    display: flex;
+}
+.Menu ul li{
+    opacity: 0.88;
+    padding: 12px 24px;
+    background: linear-gradient(
+        to bottom,
+        #209cff,
+        #69e0cf
+    );
+}
+.Menu ul li:hover{
+    background: linear-gradient(
+        to left,
+        #ff5858,
+        #f09819
+    );
+    opacity: 1;
+}
+.Dropdown{
+    float: left;
+    overflow: hidden;
+}
+.Menu ul li a{
+    color: rgba(0, 0, 0, 0.801);
+    text-decoration: none;
+}
+.Dropdown-content{
+    display: none;
+    float: none;
+    text-decoration: none;
+    position: absolute;
+    background-color: orange;
+    z-index: 1;
+}
+.Dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    overflow: hidden;
+}
+.Dropdown-content a:hover{
+    background-color: red;
+}
+.Dropdown:hover .Dropdown-content{
+    display: block;
+}
+.Thead{
+    background: linear-gradient(
+        to left,
+        #4facfe,
+        #00f2fe
+    );
+}
+.Thead:hover{
+    background: linear-gradient(
+        to top,
+        #4facfe,
+        #00f2fe
+    );
+}
+.ButtonS{
+    background: linear-gradient(
+        to top,
+        #4facfe,
+        #00f2fe
+    );
+    text-decoration: none;
+    padding: 8.5px;
+    border: none;
+    border-radius: 10px;
+}
+.ButtonS:hover{
+    background: linear-gradient(
+        to top,
+        #4facfe,
+        #2facfe
+    );
+}
+.ButtonH{
+    background: linear-gradient(
+        to bottom,
+        #40313e,
+        #be5869
+    );
+    text-decoration: none;
+    padding: 8.5px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.ButtonH:hover{
+    background: linear-gradient(
+        to left,
+        #f00000,
+        #dc281e
+    );
+    color: white;
+}
+.ButtonE{
+    background: linear-gradient(
+        to left,
+        #6a3093,
+        #a044FF
+    );
+    text-decoration: none;
+    padding: 8.5px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.ButtonE:hover{
+    background: linear-gradient(
+        to left,
+        #a044ff,
+        #a05fcc
+    );
+    color: white;
+}
+.Textbox{
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #4facfe;
+    outline: 0;
+    height: 30px;
+    width: 100%;;
+}
+@media screen and (max-width:1140px) and (min-width:425px){
+    .Menu li{
+        flex-direction: column;
+    }
+    .Menu{
+        flex-direction: column;
+    }
+}
