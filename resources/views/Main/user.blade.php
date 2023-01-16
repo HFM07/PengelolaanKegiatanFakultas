@@ -1,7 +1,3 @@
-@extends('')
-
-@section('content')
-
 <!DOCTYPE html>
 <html lang="en">
 
