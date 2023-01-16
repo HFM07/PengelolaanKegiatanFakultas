@@ -50,19 +50,19 @@
         @csrf
         <div class="mb-3 row">
             <label for="Username" class="form-label text-light">Username</label>
-            <input type="text" class="Textbox" name='Username' id="Username">
+            <input type="text" class="Textbox text-dark" name='Username' id="Username">
         </div>
         <div class="mb-3 row">
             <label for="Password" class="form-label text-light">Password</label>
-            <input type="Password" class="Textbox" name='Password' id="Password">
+            <input type="Password" class="Textbox text-dark" name='Password' id="Password">
         </div>
         <div class="mb-3 row">
             <label for="Email" class="form-label text-light">Email</label>
-            <input type="Email" class="Textbox" name='Email' id="Email">
+            <input type="Email" class="Textbox text-dark" name='Email' id="Email">
         </div>
         <div class="mb-3 row">
             <label for="HakAkses" class="form-label text-light">Hak Akses</label>
-            <input type="HakAkses" class="Textbox" name='HakAkses' id="HakAkses">
+            <input type="HakAkses" class="Textbox text-dark" name='HakAkses' id="HakAkses">
         </div>
         </div>
         <button type="submit" class="ButtonS" name="submit">Simpan</button>

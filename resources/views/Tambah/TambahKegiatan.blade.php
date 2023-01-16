@@ -50,23 +50,23 @@
         @csrf
         <div class="mb-3 row">
             <label for="Id" class="form-label text-light">Id</label>
-            <input type="text" class="Textbox" name='Id' id="Id">
+            <input type="text" class="Textbox text-dark" name='Id' id="Id">
         </div>
         <div class="mb-3 row">
             <label for="NamaKegiatan" class="form-label text-light">Nama Kegiatan</label>
-            <input type="text" class="Textbox" name='NamaKegiatan' id="NamaKegiatan">
+            <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
         </div>
         <div class="mb-3 row">
             <label for="TglMulai" class="col-sm-2 col-form-label text-light">Tanggal Mulai</label>
-            <input type="date" class="Textbox" name='TglMulai' id="TglMulai">
+            <input type="date" class="Textbox text-dark" name='TglMulai' id="TglMulai">
         </div>
         <div class="mb-3 row">
             <label for="TglSelesai" class="col-sm-2 col-form-label text-light">Tanggal Selesai</label>
-            <input type="date" class="Textbox" name='TglSelesai' id="TglSelesai">
+            <input type="date" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
         </div>
         <div class="mb-3 row">
             <label for="Status" class="col-sm-2 col-form-label text-light">Status</label>
-            <input type="text" class="Textbox " name="Status" id="Status">
+            <input type="text" class="Textbox text-dark" name="Status" id="Status">
         </div>
         </div>
         <button type="submit" class="ButtonS" name="submit">Simpan</button>

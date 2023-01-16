@@ -2,7 +2,7 @@ body{
     background: url(Background-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: black;
 }
 .Menu{
     display: flex;
