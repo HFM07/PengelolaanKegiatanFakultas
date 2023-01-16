@@ -14,18 +14,20 @@
                 <form action="{{ route('user.tambahKegiatan') }}" method="POST">
                     @csrf
                     <div class="mb-3 row">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" name='username' id="username">
+                        <label for="Username" class="form-label">Username</label>
+                        <input type="text" class="form-control" name='Username' id="Username">
                     </div>
-                </div>
                     <div class="mb-3 row">
-                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                        <input type="password" class="form-control" name='password' id="password">
+                        <label for="Password" class="col-sm-2 col-form-label">Password</label>
+                        <input type="Password" class="form-control" name='Password' id="Password">
                     </div>
-                </div>
                     <div class="mb-3 row">
-                        <label for="email" class="col-sm-2 col-form-label">Email</label>
-                        <input type="email" class="form-control" name='email' id="email">
+                        <label for="Email" class="col-sm-2 col-form-label">Email</label>
+                        <input type="Email" class="form-control" name='Email' id="Email">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="HakAkses" class="col-sm-2 col-form-label">Hak Akses</label>
+                        <input type="HakAkses" class="form-control" name='HakAkses' id="HakAkses">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" name="submit">Simpan</button>

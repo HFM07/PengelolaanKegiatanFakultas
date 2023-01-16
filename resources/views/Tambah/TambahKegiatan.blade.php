@@ -13,25 +13,25 @@
                 <a href="{{route('kegiatan')}}" class="btn btn-primary">Kembali</a>
                 <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
                     @csrf
-                    <input type="hidden" class="form-control" name='id'  id="id">
                     <div class="mb-3 row">
-                        <label for="nama_kegiatan" class="form-label">Nama Kegiatan</label>
-                        <input type="text" class="form-control" name='nama_kegiatan' id="nama_kegiatan">
+                        <label for="Id" class="form-label">Id</label>
+                        <input type="text" class="form-control" name='Id' id="Id">
                     </div>
-                </div>
                     <div class="mb-3 row">
-                        <label for="tgl_mulai" class="col-sm-2 col-form-label">Tanggal Mulai</label>
-                        <input type="date" class="form-control" name='tgl_mulai' id="tgl_mulai">
+                        <label for="NamaKegiatan" class="form-label">Nama Kegiatan</label>
+                        <input type="text" class="form-control" name='NamaKegiatan' id="NamaKegiatan">
                     </div>
-                </div>
                     <div class="mb-3 row">
-                        <label for="tgl_selesai" class="col-sm-2 col-form-label">Tanggal Selesai</label>
-                        <input type="date" class="form-control" name='tgl_selesai' id="tgl_selesai">
+                        <label for="TglMulai" class="col-sm-2 col-form-label">Tanggal Mulai</label>
+                        <input type="date" class="form-control" name='TglMulai' id="TglMulai">
                     </div>
-                </div>
                     <div class="mb-3 row">
-                        <label for="status" class="col-sm-2 col-form-label">Status</label>
-                        <input type="text" class="form-control" name="status" id="status">
+                        <label for="TglSelesai" class="col-sm-2 col-form-label">Tanggal Selesai</label>
+                        <input type="date" class="form-control" name='TglSelesai' id="TglSelesai">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="Status" class="col-sm-2 col-form-label">Status</label>
+                        <input type="text" class="form-control" name="Status" id="Status">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" name="submit">Simpan</button>
