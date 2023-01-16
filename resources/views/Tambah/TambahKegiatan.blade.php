@@ -11,7 +11,7 @@
         <h3>Tambah Kegiatan/h3>
             <div class="my-3 p-3 bg-body rounded shadow-sm">
                 <a href="{{route('kegiatan')}}" class="btn btn-primary">Kembali</a>
-                <form action="{{ route('kegiatan.store') }}" method="POST">
+                <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
                     @csrf
                     <input type="hidden" class="form-control" name='id'  id="id">
                     <div class="mb-3 row">

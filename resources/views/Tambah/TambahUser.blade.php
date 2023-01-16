@@ -10,8 +10,8 @@
     <body>
         <h3>Tambah Kegiatan/h3>
             <div class="my-3 p-3 bg-body rounded shadow-sm">
-                <a href="{{route('kegiatan')}}" class="btn btn-primary">Kembali</a>
-                <form action="{{ route('kegiatan.store') }}" method="POST">
+                <a href="{{route('user')}}" class="btn btn-primary">Kembali</a>
+                <form action="{{ route('user.tambahKegiatan') }}" method="POST">
                     @csrf
                     <div class="mb-3 row">
                         <label for="username" class="form-label">Username</label>
