@@ -47,8 +47,8 @@
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
-                            <a href="{{ route('kegiatan') }}/{{ $i->id }}/edit" class="btn btn-warning">Edit</a>
-                            <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->id }}">Hapus</a>
+                            <a href="{{ route('kegiatan') }}/{{ $i->Id }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->Id }}">Hapus</a>
                         </td>
                     </tr>
                 @endforeach
@@ -73,7 +73,7 @@
 
             $('.btn-danger').click(function(e) {
                 e.preventDefault();
-                var data = $(this).data('id');
+                var data = $(this).data('Id');
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -91,7 +91,7 @@
                         )
                         $.ajax({
                             type: "DELETE",
-                            url: "{{ route('kegiatan') }}/" + $(this).data('id') +
+                            url: "{{ route('kegiatan') }}/" + $(this).data('Id') +
                                 "/hapus",
                             success: function(response) {
                                 location.reload();

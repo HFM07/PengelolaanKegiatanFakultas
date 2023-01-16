@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Login/login');
+    return view('Main/home');
 });
 
 Route::get('Main/user', [\App\Http\Controllers\userController::class, 'index'])->name('user');
