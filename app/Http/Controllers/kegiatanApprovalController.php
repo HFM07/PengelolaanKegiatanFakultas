@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\kegiatanApproval;
+use App\Models\kegiatan;
+use App\Models\user;
 
 class kegiatanApprovalController extends Controller
 {
@@ -22,7 +24,9 @@ class kegiatanApprovalController extends Controller
 
     public function tampilTambahKegiatanApproval()
     {
-        return view('Tambah/TambahKegiatanApproval');
+        $kegiatan = kegiatan::all();
+        $user = user::all();
+        return view('Tambah/TambahKegiatanApproval', ['kegiatan'=>$kegiatan, 'user'=>$user]);
     }
 
     public function tambahKegiatanApproval(Request $request)

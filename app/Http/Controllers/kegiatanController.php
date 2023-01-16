@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\kegiatan;
+use App\Models\user;
 
 class kegiatanController extends Controller
 {
@@ -23,7 +24,8 @@ class kegiatanController extends Controller
 
     public function tampilTambahKegiatan()
     {
-        return view('Tambah/TambahKegiatan');
+        $user = user::all();
+        return view('Tambah/TambahKegiatan', ['user'=>$user]);
     }
 
     public function tambahKegiatan(Request $request)
