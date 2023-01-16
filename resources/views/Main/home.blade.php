@@ -41,6 +41,8 @@
                     <a href="/Edit/EditKegiatanDone">Edit Kegiatan Done</a>
                 </div>
             </li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Log Out</a></li>
         </ul>
     </div>
     <div class="container">
