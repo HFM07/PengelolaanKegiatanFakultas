@@ -66,7 +66,7 @@
         </div>
         <div class="mb-3 row">
             <label for="Status" class="col-sm-2 col-form-label text-light">Status</label>
-            <input type="text" class="Textbox" name="Status" id="Status">
+            <input type="text" class="Textbox " name="Status" id="Status">
         </div>
         </div>
         <button type="submit" class="ButtonS" name="submit">Simpan</button>

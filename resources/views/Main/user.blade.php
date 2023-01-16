@@ -67,8 +67,8 @@
                         <td>{{ $i->Password }}</td>
                         <td>{{ $i->HakAkses }}</td>
                         <td>
-                            <a href="{{ route('user') }}/{{ $i->Username }}/getEditUser" class="btn btn-warning">Edit</a>
-                            <a href="javascript:void(0)" class="btn btn-danger" data-id="{{ $i->Username }}">Hapus</a>
+                            <a href="{{ route('user') }}/{{ $i->Username }}/getEditUser" class="ButtonS">Edit</a>
+                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Username }}">Hapus</a>
                         </td>
                     </tr>
                 @endforeach
