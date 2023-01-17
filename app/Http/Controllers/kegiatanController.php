@@ -34,6 +34,7 @@ class kegiatanController extends Controller
             'Id' => $request -> Id,
             'PembuatId' => $request -> PembuatId,
             'NamaKegiatan' => $request -> NamaKegiatan,
+            'BidangKegiatan' => $request -> BidangKegiatan,
             'TglMulai' => $request -> TglMulai,
             'TglSelesai' => $request -> TglSelesai,
             'Status' => $request -> Status
@@ -54,6 +55,7 @@ class kegiatanController extends Controller
                 'Id' => $request -> Id,
                 'PembuatId' => $request -> PembuatId,
                 'NamaKegiatan' => $request -> NamaKegiatan,
+                'BidangKegiatan' => $request -> BidangKegiatan,
                 'TglMulai' => $request -> TglMulai,
                 'TglSelesai' => $request -> TglSelesai,
                 'Status' => $request -> Status
