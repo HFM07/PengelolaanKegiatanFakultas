@@ -34,11 +34,11 @@ Route::delete('Tambah/{Id}/hapusUser', [\App\Http\Controllers\userController::cl
 
 
 Route::get('Main/kegiatan', [\App\Http\Controllers\kegiatanController::class, 'index'])->name('kegiatan');
-Route::get('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'tampilTambahKegiatan'])->name('kegiatan.tampilTambahKegiatan');
-Route::post('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'tambahKegiatan'])->name('kegiatan.tambahKegiatan');
-Route::get('Tambah/{Id}/getEditKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'getEditKegiatan'])->name('kegiatan.getEditKegiatan');
-Route::post('Tambah/{Id}/updateKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'updateKegiatan'])->name('kegiatan.updateKegiatan');
-Route::delete('Tambah/{Id}/hapusKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'hapusKegiatan'])->name('kegiatan.hapusKegiatan');
+Route::get('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanController::class, 'tampilTambahKegiatan'])->name('kegiatan.tampilTambahKegiatan');
+Route::post('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanController::class, 'tambahKegiatan'])->name('kegiatan.tambahKegiatan');
+Route::get('Tambah/{Id}/getEditKegiatan', [\App\Http\Controllers\kegiatanController::class, 'getEditKegiatan'])->name('kegiatan.getEditKegiatan');
+Route::post('Tambah/{Id}/updateKegiatan', [\App\Http\Controllers\kegiatanController::class, 'updateKegiatan'])->name('kegiatan.updateKegiatan');
+Route::delete('Tambah/{Id}/hapusKegiatan', [\App\Http\Controllers\kegiatanController::class, 'hapusKegiatan'])->name('kegiatan.hapusKegiatan');
 
 
 Route::get('Main/kegiatanApproval', [\App\Http\Controllers\kegiatanApprovalController::class, 'index'])->name('kegiatanApproval');
