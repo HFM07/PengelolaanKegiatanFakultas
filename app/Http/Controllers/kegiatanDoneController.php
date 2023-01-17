@@ -17,7 +17,7 @@ class kegiatanDoneController extends Controller
 
     public function hapusKegiatanDone($Id)
     {
-        kegiatanDone::table('kegiatan_done') -> where('kegiatan_done', $Id) -> delete();
+        kegiatanDone::destroy($Id);
         return redirect("Main/user");
     }
 
@@ -30,8 +30,9 @@ class kegiatanDoneController extends Controller
 
     public function tambahKegiatanDone(Request $request)
     {
-        kegiatanDone::table('kegiatan_done') -> insert([
+        kegiatanDone::updateOrCreate([
             'Id'=> $request -> Id,
+        ], [
             'KegiatanId'=> $request -> KegiatanId,
             'PengevaluasiId'=> $request -> PengevaluasiId,
             'TglMulai'=> $request -> TglMulai,
@@ -43,22 +44,8 @@ class kegiatanDoneController extends Controller
 
     public function getEditKegiatanDone($Id)
     {
-        $kegiatanDone = kegiatanDone::table('kegiatan_done') -> where('Id', $Id) -> get();
+        $kegiatanDone = kegiatanDone::find($Id);
         return view('Edit/EditKegiatanDone', ['kegiatanDone' => $kegiatanDone]);
     }
 
-    public function updateKegiatanDone(Request $request)
-    {
-        kegiatanDone::table('kegiatan_done') -> where('Id', $request -> Id) -> update(
-            [
-                'Id'=> $request -> Id,
-                'KegiatanId'=> $request -> KegiatanId,
-                'PengevaluasiId'=> $request -> PengevaluasiId,
-                'TglMulai'=> $request -> TglMulai,
-                'TglSelesai'=> $request -> TglSelesai,
-                'BuktiTerlaksana'=> $request -> BuktiTerlaksana
-            ]
-        );
-        return redirect('Main/kegiatanDone');
-    }
 }

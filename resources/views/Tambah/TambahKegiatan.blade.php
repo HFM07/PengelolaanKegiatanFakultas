@@ -53,6 +53,10 @@
             <input type="text" class="Textbox text-dark" name='Id' id="Id">
         </div>
         <div class="mb-3 row">
+            <label for="PembuatId" class="form-label text-dark">PembuatId</label>
+            <input type="text" class="Textbox text-dark" name='PembuatId' id="PembuatId">
+        </div>
+        <div class="mb-3 row">
             <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
             <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
         </div>

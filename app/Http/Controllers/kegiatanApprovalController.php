@@ -18,7 +18,7 @@ class kegiatanApprovalController extends Controller
 
     public function hapusKegiatanApproval($Id)
     {
-        kegiatanApproval::table('kegiatan_approval') -> where('kegiatan_approval', $Id) -> delete();
+        kegiatanApproval::destroy($Id);
         return redirect("Main/kegiatanApproval");
     }
 
@@ -31,9 +31,10 @@ class kegiatanApprovalController extends Controller
 
     public function tambahKegiatanApproval(Request $request)
     {
-        kegiatanApproval::table('kegiatan_approval') -> insert([
+        kegiatanApproval::updateOrCreate([
             'Id'  => $request -> Id,
-            'PengevaluasiId' => $request -> pengevaluasiId,
+        ], [
+            'PengevaluasiId' => $request -> PengevaluasiId,
             'KegiatanId'  => $request -> KegiatanId,
             'Status' => $request -> Status
         ]);
@@ -42,20 +43,8 @@ class kegiatanApprovalController extends Controller
 
     public function getEditKegiatanApproval($Id)
     {
-        $kegiatanApproval = kegiatanApproval::table('kegiatan_approval') -> where('Id', $Id) -> get();
+        $kegiatanApproval = kegiatanApproval::find($Id);
         return view('Edit/EditKegiatanApproval', ['kegiatan_approval' => $kegiatanApproval]);
     }
 
-    public function updateKegiatanApproval(Request $request)
-    {
-        kegiatanApproval::table('kegiatan_approval') -> where('Id', $request -> Id) -> update(
-            [
-                'Id'  => $request -> Id,
-                'PengevaluasiId' => $request -> pengevaluasiId,
-                'KegiatanId'  => $request -> KegiatanId,
-                'Status' => $request -> Status
-            ]
-        );
-        return redirect('Main/kegiatanApproval');
-    }
 }

@@ -18,7 +18,7 @@ class kegiatanController extends Controller
 
     public function hapusKegiatan($Id)
     {
-        kegiatan::table('kegiatan') -> where('kegiatan', $Id) -> delete();
+        kegiatan::destroy($Id);
         return redirect("Main/kegiatan");
     }
 
@@ -30,8 +30,9 @@ class kegiatanController extends Controller
 
     public function tambahKegiatan(Request $request)
     {
-        kegiatan::table('kegiatan') -> insert([
+        kegiatan::updateOrCreate([
             'Id' => $request -> Id,
+        ], [
             'PembuatId' => $request -> PembuatId,
             'NamaKegiatan' => $request -> NamaKegiatan,
             'BidangKegiatan' => $request -> BidangKegiatan,
@@ -44,23 +45,8 @@ class kegiatanController extends Controller
 
     public function getEditKegiatan($Id)
     {
-        $kegiatan = kegiatan::table('kegiatan') -> where('Id', $Id) -> get();
+        $kegiatan = kegiatan::find($Id);
         return view('Edit/EditKegiatan', ['kegiatan' => $kegiatan]);
     }
 
-    public function updateKegiatan(Request $request)
-    {
-        kegiatan::table('kegiatan') -> where('Id', $request -> Id) -> update(
-            [
-                'Id' => $request -> Id,
-                'PembuatId' => $request -> PembuatId,
-                'NamaKegiatan' => $request -> NamaKegiatan,
-                'BidangKegiatan' => $request -> BidangKegiatan,
-                'TglMulai' => $request -> TglMulai,
-                'TglSelesai' => $request -> TglSelesai,
-                'Status' => $request -> Status
-            ]
-        );
-        return redirect('Main/kegiatan');
-    }
 }
