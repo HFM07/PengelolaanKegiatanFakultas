@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
+    return view('Main/home');
+});
 
 Route::get('/register', [registerController::class, 'index'])->name('register');
 Route::post('/register', [registerController::class, 'register'])->name('register.post');
@@ -34,11 +34,11 @@ Route::delete('Tambah/{Id}/hapusUser', [\App\Http\Controllers\userController::cl
 
 
 Route::get('Main/kegiatan', [\App\Http\Controllers\kegiatanController::class, 'index'])->name('kegiatan');
-Route::get('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanApprovalController::class, 'tampilTambahKegiatan'])->name('kegiatan.tampilTambahKegiatan');
-Route::post('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanApprovalController::class, 'tambahKegiatan'])->name('kegiatan.tambahKegiatan');
-Route::get('Tambah/{Id}/getEditKegiatan', [\App\Http\Controllers\kegiatanApprovalController::class, 'getEditKegiatan'])->name('kegiatan.getEditKegiatan');
-Route::post('Tambah/{Id}/updateKegiatan', [\App\Http\Controllers\kegiatanApprovalController::class, 'updateKegiatan'])->name('kegiatan.updateKegiatan');
-Route::delete('Tambah/{Id}/hapusKegiatan', [\App\Http\Controllers\kegiatanApprovalController::class, 'hapusKegiatan'])->name('kegiatan.hapusKegiatan');
+Route::get('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'tampilTambahKegiatan'])->name('kegiatan.tampilTambahKegiatan');
+Route::post('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'tambahKegiatan'])->name('kegiatan.tambahKegiatan');
+Route::get('Tambah/{Id}/getEditKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'getEditKegiatan'])->name('kegiatan.getEditKegiatan');
+Route::post('Tambah/{Id}/updateKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'updateKegiatan'])->name('kegiatan.updateKegiatan');
+Route::delete('Tambah/{Id}/hapusKegiatan', [\App\Http\Controllers\kegiatanControllereg::class, 'hapusKegiatan'])->name('kegiatan.hapusKegiatan');
 
 
 Route::get('Main/kegiatanApproval', [\App\Http\Controllers\kegiatanApprovalController::class, 'index'])->name('kegiatanApproval');
