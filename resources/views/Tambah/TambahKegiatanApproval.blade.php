@@ -13,15 +13,7 @@
                 <a href="{{route('kegiatan')}}" class="btn btn-primary">Kembali</a>
                 <form action="{{ route('kegiatan.store') }}" method="POST">
                     @csrf
-                    <input type="hidden" class="form-control" name='id'  id="id">
-                    <div class="mb-3">
-                        <label for="kegiatan_id" class="form-label">ID Kegiatan</label>
-                        <select name="kegiatan_id" id="kegiatan_id" class="form-control">
-                            @foreach ($kegiatanApproval as $item => $i)
-                                <option value="{{ $i->id }}">{{ $i->kegiatan }}</option>
-                            @endforeach
-                        </select>
-                </div>
+                    <input type="hidden" class="form-control" name='id'  id="id">                  
                     <div class="mb-3 row">
                         <label for="tgl_mulai" class="col-sm-2 col-form-label">Tanggal Mulai</label>
                         <input type="date" class="form-control" name='tgl_mulai' id="tgl_mulai">
@@ -36,6 +28,14 @@
                         <label for="status" class="col-sm-2 col-form-label">Status</label>
                         <input type="text" class="form-control" name="status" id="status">
                     </div>
+                </div>
+                <div class="mb-3">
+                        <label for="kegiatan_id" class="form-label">ID Kegiatan</label>
+                        <select name="kegiatan_id" id="kegiatan_id" class="form-control">
+                            @foreach ($kegiatanApproval as $item => $i)
+                                <option value="{{ $i->id }}">{{ $i->kegiatan }}</option>
+                            @endforeach
+                        </select>
                 </div>
                 <button type="submit" class="btn btn-primary" name="submit">Simpan</button>
             </div>
