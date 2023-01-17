@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Main/home');
-});
+    return view('welcome');
+})->middleware('auth');
+
+Route::get('/register', [registerController::class, 'index'])->name('register');
+Route::post('/register', [registerController::class, 'register'])->name('register.post');
+Route::get('/login', [loginController::class, 'index'])->name('login');
+Route::post('/login', [loginController::class, 'login'])->name('login.post');
+Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+
 
 Route::get('Main/user', [\App\Http\Controllers\userController::class, 'index'])->name('user');
 Route::get('Tambah/TambahUser', [\App\Http\Controllers\userController::class, 'tampilTambahUser'])->name('user.tampilTambahUser');

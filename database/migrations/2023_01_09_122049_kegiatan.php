@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('PembuatId');
             $table->foreign('PembuatId')->references('Username')->on('user');
             $table->string('NamaKegiatan', 50);
+            $table->string('BidangKegiatan', 50);
             $table->dateTime('TglMulai');
             $table->dateTime('TglSelesai');
             $table->string('Status', 30);

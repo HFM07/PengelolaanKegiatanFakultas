@@ -7,15 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/login" method="POST">
+    <form action="/register" method="POST">
         @csrf
+        <label for="name">Nama</label>
+        <input type="text" name="name" placeholder="Nama">
+        <br/>
         <label for="email">Email</label>
-        <input type="text" name="email" placeholder="Email">
+        <input type="email" name="email" placeholder="Email">
         <br/>
         <label for="password">Password</label>
         <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
+        <button type="submit">Register</button>
     </form>
-    <a href="/register">Belum punya akun?</a>
+    <a href="/login">Sudah punya akun?</a>
 </body>
 </html>

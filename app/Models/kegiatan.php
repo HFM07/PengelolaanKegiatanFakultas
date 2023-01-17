@@ -19,6 +19,7 @@ class kegiatan extends Model
         'Id',
         'PembuatId',
         'NamaKegiatan',
+        'BidangKegiatan',
         'TglMulai',
         'TglSelesai',
         'Status'
