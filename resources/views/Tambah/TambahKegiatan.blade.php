@@ -54,7 +54,11 @@
         </div>
         <div class="mb-3 row">
             <label for="PembuatId" class="form-label text-dark">PembuatId</label>
-            <input type="text" class="Textbox text-dark" name='PembuatId' id="PembuatId">
+            <select name="PembuatId" id="PembuatId" class="Textbox">
+                @foreach ($user as $item=>$i)
+                    <option value="{{$i->Username}}">{{$i->Username}}</option>
+                @endforeach
+            </select>
         </div>
         <div class="mb-3 row">
             <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
