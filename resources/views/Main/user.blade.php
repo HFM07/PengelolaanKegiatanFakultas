@@ -65,8 +65,8 @@
                         <td>{{ $i->Password }}</td>
                         <td>{{ $i->HakAkses }}</td>
                         <td>
-                            <a href="{{ route('user') }}/{{ $i->Username }}/getEditUser" class="ButtonS">Edit</a>
-                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Username }}">Hapus</a>
+                            <a href="{{ route('user') }}/{{ $i->Username }}/getEditUser" class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Username }}"><i class="fa-solid fa-trash"></i>Hapus</a>
                         </td>
                     </tr>
                 @endforeach

@@ -69,8 +69,8 @@
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
-                            <a href="{{ route('kegiatanApproval') }}/{{ $i->Id }}/getEditKegiatanApproval" class="ButtonS">Edit</a>
-                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Id }}">Hapus</a>
+                            <a href="{{ route('kegiatanApproval') }}/{{ $i->Id }}/getEditKegiatanApproval" class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Id }}"><i class="fa-solid fa-trash"></i>Hapus</a>
                         </td>
                     </tr>
                 @endforeach
