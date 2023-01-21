@@ -13,16 +13,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('Main/home');
 });
+*/
+Route::get('/', function () {
+    return view('Login/login');
+});
 
-Route::get('Login/register', [registerController::class, 'index'])->name('register');
-Route::post('Login/register', [registerController::class, 'register'])->name('register.post');
-Route::get('Login/login', [loginController::class, 'index'])->name('login');
-Route::post('Login/login', [loginController::class, 'login'])->name('login.post');
-Route::post('Login/logout', [loginController::class, 'logout'])->name('logout');
+Route::get('Login/register', [\App\Http\Controllers\registerController::class, 'index'])->name('register');
+Route::post('Login/register', [\App\Http\Controllers\registerController::class, 'register'])->name('register.post');
+Route::get('Login/login', [\App\Http\Controllers\loginController::class, 'index'])->name('login');
+Route::post('Login/login', [\App\Http\Controllers\loginController::class, 'login'])->name('login.post');
+Route::post('Login/logout', [\App\Http\Controllers\loginController::class, 'logout'])->name('logout');
 
 
 Route::get('Main/user', [\App\Http\Controllers\userController::class, 'index'])->name('user');

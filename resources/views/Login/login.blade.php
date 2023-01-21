@@ -24,11 +24,11 @@
             @csrf
             <div class="mb-3 row">
                 <label for="Username">Username</label>
-                <input type="text" class="Textbox" name="Username" id="Username">
+                <input type="text" class="Textbox" name="Username" id="Username" required>
             </div>
             <div class="mb-3 row">
                 <label for="Password">Password</label>
-                <input type="password" class="Textbox" name="Password" id="Password">
+                <input type="password" class="Textbox" name="Password" id="Password" required>
             </div>
             <input type="button" class="ButtonS" name="submit" value="Login">
             <a href="Login/register">Belum punya akun?</a>
