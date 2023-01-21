@@ -32,7 +32,7 @@
             </div>
             <input type="button" class="ButtonS" name="submit" value="Login">
         </form>
-        <a href="/register">Belum punya akun?</a>
+        <a href="Login/register">Belum punya akun?</a>
     </div>
 </body>
 
