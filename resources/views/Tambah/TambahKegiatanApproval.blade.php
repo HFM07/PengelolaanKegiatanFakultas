@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -6,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kegiatan</title>
+    <link rel="stylesheet" href="{{ asset('css/Tampilan.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
@@ -94,7 +94,7 @@
                 <a href="{{route('kegiatan')}}" class="btn btn-primary">Kembali</a>
                 <form action="{{ route('kegiatan.store') }}" method="POST">
                     @csrf
-                    <input type="hidden" class="form-control" name='id'  id="id">                  
+                    <input type="hidden" class="form-control" name='id'  id="id">
                     <div class="mb-3 row">
                         <label for="tgl_mulai" class="col-sm-2 col-form-label">Tanggal Mulai</label>
                         <input type="date" class="form-control" name='tgl_mulai' id="tgl_mulai">
