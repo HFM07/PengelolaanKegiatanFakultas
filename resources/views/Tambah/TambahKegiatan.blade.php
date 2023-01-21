@@ -57,8 +57,12 @@
             </select>
         </div>
         <div class="mb-3 row">
-            <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
+            <label for="BidangKegiatan" class="form-label text-dark">Nama Kegiatan</label>
             <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
+        </div>
+        <div class="mb-3 row">
+            <label for="BidangKegiatan" class="form-label text-dark">Bidang Kegiatan</label>
+            <input type="text" class="Textbox text-dark" name='BidangKegiatan' id="BidangKegiatan">
         </div>
         <div class="mb-3 row">
             <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>

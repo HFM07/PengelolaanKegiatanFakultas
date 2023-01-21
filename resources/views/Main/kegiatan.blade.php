@@ -51,6 +51,7 @@
                     <th>Id</th>
                     <th>Pembuat Id</th>
                     <th>Nama Kegiatan</th>
+                    <th>Bidang Kegiatan</th>
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Selesai</th>
                     <th>Status</th>
@@ -64,6 +65,7 @@
                         <td>{{ $i->Id }}</td>
                         <td>{{ $i->User->Usermame }}</td>
                         <td>{{ $i->NamaKegiatan }}</td>
+                        <td>{{ $i->BidangKegiatan }}</td>
                         <td>{{ $i->TglMulai }}</td>
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
