@@ -44,10 +44,7 @@
     </div>
     <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
         @csrf
-        <div class="mb-3 row">
-            <label for="Id" class="form-label text-dark">Id</label>
-            <input type="text" class="Textbox text-dark" name='Id' id="Id">
-        </div>
+        <input type="hidden" class="Textbox text-dark" name="Id" id="Id" value="{{$kegiatan->Id}}">
         <div class="mb-3 row">
             <label for="PembuatId" class="form-label text-dark">PembuatId</label>
             <select name="PembuatId" id="PembuatId" class="Textbox">
@@ -57,7 +54,7 @@
             </select>
         </div>
         <div class="mb-3 row">
-            <label for="BidangKegiatan" class="form-label text-dark">Nama Kegiatan</label>
+            <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
             <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
         </div>
         <div class="mb-3 row">
