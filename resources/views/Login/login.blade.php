@@ -20,7 +20,7 @@
 
 <body>
     <div class="LoginBox">
-        <form action="{{login.post}}" method="POST">
+        <form action="Login/login" method="POST">
             @csrf
             <div class="mb-3 row">
                 <label for="Username">Username</label>
