@@ -46,7 +46,11 @@
     </div>
     <form action="{{ route('user.tambahUser') }}" method="POST">
         @csrf
-        <input type="hidden" class="Textbox text-dark" name='Username' id="Username" value="{{$user->username}]">
+        <input type="hidden" class="Textbox text-dark" name='Username' id="Username" value="{{$user->Id}]">
+        <div class="mb-3 row">
+            <label for="Username" class="form-label text-dark">Username</label>
+            <input type="Username" class="Textbox text-dark" name='Username' id="Username">
+        </div>
         <div class="mb-3 row">
             <label for="Password" class="form-label text-dark">Password</label>
             <input type="Password" class="Textbox text-dark" name='Password' id="Password">

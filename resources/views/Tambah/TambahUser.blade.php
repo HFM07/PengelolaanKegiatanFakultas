@@ -47,6 +47,10 @@
     <form action="{{ route('user.tambahUser') }}" method="POST">
         @csrf
         <div class="mb-3 row">
+            <label for="Id" class="form-label text-dark">Id</label>
+            <input type="text" class="Textbox text-dark" name='Id' id="Id">
+        </div>
+        <div class="mb-3 row">
             <label for="Username" class="form-label text-dark">Username</label>
             <input type="text" class="Textbox text-dark" name='Username' id="Username">
         </div>
