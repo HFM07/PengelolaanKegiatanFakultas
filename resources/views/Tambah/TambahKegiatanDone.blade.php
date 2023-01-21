@@ -42,7 +42,6 @@
             <li><a href="">Log Out</a></li>
         </ul>
     </div>
-    <h3>Tambah Kegiatan/h3>
         <form action="{{ route('kegiatanDone.tambahKegiatanDone') }}" method="POST">
             @csrf
             <div class="mb-3 row">
