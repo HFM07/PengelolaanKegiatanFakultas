@@ -48,7 +48,7 @@
                 <label for="Id" class="form-label text-dark">Id</label>
                 <input type="text" class="Textbox text-dark" name='Id' id="Id">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 row">
                 <label for="PengevaluasiId" class="form-label text-dark">ID Pengevaluasi</label>
                 <select name="PengevaluasiId" id="PengevaluasiId" class="Textbox text-dark">
                     @foreach ($user as $item => $i)
@@ -56,7 +56,7 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 row">
                 <label for="KegiatanId" class="form-label text-dark">ID Kegiatan</label>
                 <select name="KegiatanId" id="KegiatanId" class="Textbox text-dark">
                     @foreach ($kegiatan as $item => $i)
