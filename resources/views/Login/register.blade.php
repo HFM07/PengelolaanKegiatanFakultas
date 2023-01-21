@@ -23,12 +23,26 @@
         <form action="/register" method="POST">
             @csrf
             <div class="mb-3 row">
+                <label for="Id">Id</label>
+                <input type="text" class="Textbox" name="Id" id="Id">
+            </div>
+            <div class="mb-3 row">
                 <label for="Username">Username</label>
                 <input type="text" class="Textbox" name="Username" id="Username">
             </div>
             <div class="mb-3 row">
                 <label for="Password">Password</label>
                 <input type="password" class="Textbox" name="Password" id="Password">
+            </div>
+            <div class="mb-3 row">
+                <label for="Email">Email</label>
+                <input type="password" class="Textbox" name="Email" id="Email">
+            </div>
+            <div class="mb-3 row">
+                <label for="HakAkses">HakAkses</label>
+                <select class="Textbox" name="HakAkses" id="HakAkses">
+                    <option value="Lv1">Lv1</option>
+                </select>
             </div>
             <input type="button" class="ButtonS" name="submit" value="Login">
         </form>
