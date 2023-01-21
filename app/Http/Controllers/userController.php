@@ -30,7 +30,7 @@ class userController extends Controller
             'Id' => $request -> Id,
         ], [
             'Username' => $request -> Username,
-            'Password' => sha1($request -> Password),
+            'Password' => bcrypt($request -> Password),
             'Email' => $request -> Email,
             'HakAkses' => $request -> HakAkses
         ]);
