@@ -29,6 +29,6 @@ class kegiatanApproval extends Model
 
     public function user()
     {
-        return $this->belongsTo(user::class, 'PengevaluasiId', 'Username', 'user');
+        return $this->belongsTo(user::class, 'PengevaluasiId', 'Id', 'user');
     }
 }

@@ -15,9 +15,10 @@ class user extends Model
     const CREATED_AT = null;
     const UPDATED_AT = null;
 
-    protected $primaryKey='Username';
+    protected $primaryKey='Id';
 
     protected $fillable = [
+        'Id',
         'Username',
         'Password',
         'Email',
