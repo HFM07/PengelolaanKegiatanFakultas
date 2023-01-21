@@ -9,17 +9,17 @@ class loginController extends Controller
 {
     public function index()
     {
-        return view('login');
+        return view('Login/login');
     }
 
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
+            'Username' => 'required|Username',
+            'Password' => 'required'
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('Username', 'Password');
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
@@ -38,6 +38,6 @@ class loginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('Login/login');
     }
 }

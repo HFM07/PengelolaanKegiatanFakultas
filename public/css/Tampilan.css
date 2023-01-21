@@ -150,6 +150,16 @@ body{
     height: 30px;
     width: 100%;;
 }
+.LoginBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(210, 210, 210, 0.25);
+    border-radius: 10px;
+}
 @media screen and (max-width:1140px) and (min-width:425px){
     .Menu li{
         flex-direction: column;

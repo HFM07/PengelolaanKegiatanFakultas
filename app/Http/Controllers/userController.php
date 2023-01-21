@@ -13,9 +13,9 @@ class userController extends Controller
         return view('Main/user', ['user'=>$user]);
     }
 
-    public function hapusUser($username)
+    public function hapusUser($Id)
     {
-        user::destroy($username);
+        user::destroy($Id);
         return redirect("Main/user");
     }
 
@@ -27,8 +27,9 @@ class userController extends Controller
     public function tambahUser(Request $request)
     {
         user::updateOrCreate([
-            'Username' => $request -> Username,
+            'Id' => $request -> Id,
         ], [
+            'Username' => $request -> Username,
             'Password' => sha1($request -> Password),
             'Email' => $request -> Email,
             'HakAkses' => $request -> HakAkses
@@ -36,9 +37,9 @@ class userController extends Controller
         return redirect('Main/user');
     }
 
-    public function getEditUser($username)
+    public function getEditUser($Id)
     {
-        $user = user::find($username);
+        $user = user::find($Id);
         return view('/Edit/EditUser', ['user' => $user]);
     }
 
