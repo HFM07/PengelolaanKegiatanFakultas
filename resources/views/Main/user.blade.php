@@ -87,7 +87,7 @@
                 }
             });
 
-            $('.btn-danger').click(function(e) {
+            $('.ButtonH').click(function(e) {
                 e.preventDefault();
                 var data = $(this).data('Username');
                 Swal.fire({
