@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\user;
 
 class registerController extends Controller
 {
@@ -24,7 +24,7 @@ class registerController extends Controller
             'HakAkses' => 'required'
         ]);
 
-        $user = new User();
+        $user = new user();
         $user->Id= $request->Id;
         $user->Username = $request->Username;
         $user->Email = $request->Email;
