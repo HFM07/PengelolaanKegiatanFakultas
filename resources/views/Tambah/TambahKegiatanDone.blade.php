@@ -70,11 +70,19 @@
             </div>
             <div class="mb-3 row">
                 <label for="TglMulai" class="form-label text-dark">Tanggal Mulai</label>
-                <input type="date" class="Textbox text-dark" name='TglMulai' id="TglMulai">
+                <select name="TglMulai" id="TglMulai" class="Textbox text-dark">
+                    @foreach ($kegiatan as $item => $i)
+                        <option value="{{ $i->TglMulai }}">{{ $i->NamaKegiatan }} : {{ $i->TglMulai }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="mb-3 row">
                 <label for="TglSelesai" class="form-label text-dark">Tanggal Selesai</label>
-                <input type="date" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
+                <select name="TglSelesai" id="TglSelesai" class="Textbox text-dark">
+                    @foreach ($kegiatan as $item => $i)
+                        <option value="{{ $i->TglSelesai }}">{{ $i->NamaKegiatan }} : {{ $i->TglSelesai }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="mb-3 row">
                 <label for="bukti_terlaksana" class="form-label text-dark">Bukti Terlaksana</label>

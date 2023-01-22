@@ -67,7 +67,7 @@
                     <tr>
                         <td>{{ $item + 1 }}</td>
                         <td>{{ $i->Id }}</td>
-                        <td>{{ $i->User->Id }}</td>
+                        <td>{{ $i->user->Id }} : {{$i->user->Username}}</td>
                         <td>{{ $i->NamaKegiatan }}</td>
                         <td>{{ $i->BidangKegiatan }}</td>
                         <td>{{ $i->TglMulai }}</td>

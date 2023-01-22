@@ -54,8 +54,6 @@
                     <th>Id</th>
                     <th>Pembuat Id</th>
                     <th>KegiatanId</th>
-                    <th>Tanggal Mulai</th>
-                    <th>Tanggal Selesai</th>
                     <th>Status</th>
                     <th>Aksi</th>
                 </tr>
@@ -65,10 +63,8 @@
                     <tr>
                         <td>{{ $item + 1 }}</td>
                         <td>{{ $i->Id }}</td>
-                        <td>{{ $i->user->Id }}</td>
-                        <td>{{ $i->kegiatan->Id }}</td>
-                        <td>{{ $i->TglMulai }}</td>
-                        <td>{{ $i->TglSelesai }}</td>
+                        <td>{{ $i->user->Id }} : {{$i->user->Username}}</td>
+                        <td>{{ $i->kegiatan->Id }} : {{$i->kegiatan->NamaKegiatan}}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
                             <a href="{{ route('kegiatanApproval') }}/{{ $i->Id }}/getEditKegiatanApproval" class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>

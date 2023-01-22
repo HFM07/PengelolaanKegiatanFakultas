@@ -20,7 +20,7 @@
 
 <body>
     <div class="LoginBox">
-        <form action="Login/register" method="POST">
+        <form action="{{ route('register')}}" method="POST">
             @csrf
             <div class="mb-3 row">
                 <label for="Id">Id</label>

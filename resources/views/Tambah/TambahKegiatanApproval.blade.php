@@ -70,7 +70,9 @@
             </div>
             <div class="mb-3 row">
                 <label for="status" class="form-label text-dark">Status</label>
-                <input type="text" class="Textbox text-dark" name="status" id="status">
+                <select class="Textbox text-dark" name="Status" id="Status">
+                    <option value="Belum disetujui">Belum disetujui</option>
+                </select>
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>
