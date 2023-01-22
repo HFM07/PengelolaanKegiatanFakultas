@@ -44,7 +44,7 @@
                     <option value="Lv1">Lv1</option>
                 </select>
             </div>
-            <input type="button" class="ButtonS" name="submit" value="Login">
+            <input type="button" class="ButtonS" name="submit" value="Daftar">
         </form>
     </div>
 </body>
