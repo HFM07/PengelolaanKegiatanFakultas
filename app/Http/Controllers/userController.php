@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\user;
+use App\Models\User;
 
 class userController extends Controller
 {
     public function index()
     {
-        $user = user::all();
+        $user = User::all();
         return view('Main/user', ['user'=>$user]);
     }
 
     public function hapusUser($Id)
     {
-        user::destroy($Id);
+        User::destroy($Id);
         return redirect("Main/user");
     }
 
@@ -26,7 +26,7 @@ class userController extends Controller
 
     public function tambahUser(Request $request)
     {
-        user::updateOrCreate([
+        User::updateOrCreate([
             'Id' => $request -> Id,
         ], [
             'Username' => $request -> Username,
@@ -39,7 +39,7 @@ class userController extends Controller
 
     public function getEditUser($Id)
     {
-        $user = user::find($Id);
+        $user = User::find($Id);
         return view('/Edit/EditUser', ['user' => $user]);
     }
 
