@@ -20,6 +20,11 @@
 
 <body>
     <div class="LoginBox">
+        @if (session('loginError'))
+            <div class="alert alert-danger">
+                {{ session('loginError') }}
+            </div>
+        @endif
         <form action="{{ route('login.post')}}" method="POST">
             @csrf
             <div class="mb-3 row">
@@ -30,8 +35,8 @@
                 <label for="Password">Password</label>
                 <input type="password" class="Textbox" name="Password" id="Password" required>
             </div>
-            <input type="button" class="ButtonS" name="submit" value="Login">
-            <a href="Login/register">Belum punya akun?</a>
+            <button type="submit" class="ButtonS">Login</button>
+            <a href="/Login/register">Belum punya akun?</a>
         </form>
     </div>
 </body>

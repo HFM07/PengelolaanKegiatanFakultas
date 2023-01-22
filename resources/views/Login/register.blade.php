@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3 row">
                 <label for="Email">Email</label>
-                <input type="password" class="Textbox" name="Email" id="Email">
+                <input type="email" class="Textbox" name="Email" id="Email">
             </div>
             <div class="mb-3 row">
                 <label for="HakAkses">HakAkses</label>
@@ -44,7 +44,7 @@
                     <option value="Lv1">Lv1</option>
                 </select>
             </div>
-            <input type="button" class="ButtonS" name="submit" value="Daftar">
+            <button type="submit" class="ButtonS">Daftar</button>
         </form>
     </div>
 </body>
