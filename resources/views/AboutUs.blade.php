@@ -14,7 +14,7 @@
 <body>
     <div class="Menu">
         <ul>
-            <li><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
+            <li><i class="fa-solid fa-house"></i><a href="/Main/home">Home</a></li>
             <li class="Dropdown"><a href="javascript:void(0)" class="DropButton"><i class="fa-solid fa-user"></i>User</a>
                 <div class="Dropdown-content">
                     <a href="/Main/user">Daftar User</a>

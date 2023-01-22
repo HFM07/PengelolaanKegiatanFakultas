@@ -36,7 +36,7 @@
                 <input type="password" class="Textbox" name="Password" id="Password" required>
             </div>
             <button type="submit" class="ButtonS">Login</button>
-            <a href="Login/register">Belum punya akun?</a>
+            <a href="/Login/register">Belum punya akun?</a>
         </form>
     </div>
 </body>
