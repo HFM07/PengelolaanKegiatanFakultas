@@ -67,11 +67,11 @@
         </div>
         <div class="mb-3 row">
             <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>
-            <input type="date" class="Textbox text-dark" name='TglMulai' id="TglMulai">
+            <input type="datetime-local" class="Textbox text-dark" name='TglMulai' id="TglMulai">
         </div>
         <div class="mb-3 row">
             <label for="TglSelesai" class="col-sm-2 col-form-label text-dark">Tanggal Selesai</label>
-            <input type="date" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
+            <input type="datetime-local" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
         </div>
         <div class="mb-3 row">
             <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
