@@ -22,10 +22,17 @@
     <div class="LoginBox">
         @if (session('loginError'))
             <div class="alert alert-danger">
+<<<<<<< HEAD
                 {{ session('loginError') }}
             </div>
         @endif
         <form action="{{ route('login.post')}}" method="POST">
+=======
+                {{ session ('loginError')}}
+            </div>
+        @endif
+        <form action="/Login/login" method="POST">
+>>>>>>> habib/master
             @csrf
             <div class="mb-3 row">
                 <label for="Username">Username</label>
