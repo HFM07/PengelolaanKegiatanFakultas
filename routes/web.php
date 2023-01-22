@@ -20,7 +20,7 @@ Route::get('/', function () {
 */
 Route::get('/', function () {
     return view('Login/login');
-});
+})->middleware('auth');
 
 
 Route::get('Login/register', [\App\Http\Controllers\registerController::class, 'index'])->name('register');
