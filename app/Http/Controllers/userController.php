@@ -13,9 +13,9 @@ class userController extends Controller
         return view('Main/user', ['user'=>$user]);
     }
 
-    public function hapusUser($Id)
+    public function hapusUser($id)
     {
-        user::destroy($Id);
+        user::destroy($id);
         return redirect("Main/user");
     }
 
@@ -27,20 +27,20 @@ class userController extends Controller
     public function tambahUser(Request $request)
     {
         user::updateOrCreate([
-            'id' => $request -> Id,
+            'id' => $request -> id,
         ], [
-            'username' => $request -> Username,
-            'password' => bcrypt($request -> Password),
-            'email' => $request -> Email,
-            'hakAkses' => $request -> HakAkses
+            'username' => $request -> username,
+            'password' => bcrypt($request -> password),
+            'email' => $request -> email,
+            'hakAkses' => $request -> hakAkses
         ]);
         return redirect('Main/user');
     }
 
-    public function getEditUser($Id)
+    public function getEditUser($id)
     {
-        $user = user::find($Id);
-        return view('/Edit/EditUser', ['user' => $user]);
+        $user = user::find($id);
+        return view('Edit/EditUser', ['user'=>$user]);
     }
 
 }

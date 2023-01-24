@@ -36,8 +36,8 @@ Route::get('Login/logout', [\App\Http\Controllers\loginController::class, 'logou
 Route::get('Main/user', [\App\Http\Controllers\userController::class, 'index'])->name('user');
 Route::get('Tambah/TambahUser', [\App\Http\Controllers\userController::class, 'tampilTambahUser'])->name('user.tampilTambahUser');
 Route::post('Tambah/TambahUser', [\App\Http\Controllers\userController::class, 'tambahUser'])->name('user.tambahUser');
-Route::get('user/{Id}/getEditUser', [\App\Http\Controllers\userController::class, 'getEditUser'])->name('user.getEditUser');
-Route::delete('user/{Id}/hapusUser', [\App\Http\Controllers\userController::class, 'hapusUser'])->name('user.hapusUser');
+Route::get('user/{id}/getEditUser', [\App\Http\Controllers\userController::class, 'getEditUser'])->name('user.getEditUser');
+Route::delete('user/{id}/hapusUser', [\App\Http\Controllers\userController::class, 'hapusUser'])->name('user.hapusUser');
 
 
 Route::get('Main/kegiatan', [\App\Http\Controllers\kegiatanController::class, 'index'])->name('kegiatan');

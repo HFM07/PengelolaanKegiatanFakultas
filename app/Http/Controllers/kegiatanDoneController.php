@@ -45,7 +45,7 @@ class kegiatanDoneController extends Controller
     public function getEditKegiatanDone($Id)
     {
         $kegiatanDone = kegiatanDone::find($Id);
-        return view('Edit/EditKegiatanDone', ['kegiatanDone' => $kegiatanDone]);
+        return view('Edit/EditKegiatanDone', ['kegiatanDone'=>$kegiatanDone]);
     }
 
 }
