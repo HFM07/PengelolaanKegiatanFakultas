@@ -95,7 +95,7 @@
 
             $('.ButtonH').click(function(e) {
                 e.preventDefault();
-                var data = $(this).data('Username');
+                var data = $(this).data('id');
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -113,7 +113,7 @@
                         )
                         $.ajax({
                             type: "DELETE",
-                            url: "{{ route('user') }}/" + $(this).data('Username') +
+                            url: "{{ route('user') }}/" + $(this).data('id') +
                                 "/hapus",
                             success: function(response) {
                                 location.reload();
