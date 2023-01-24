@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedInteger('PengevaluasiId');
             $table->unsignedInteger('KegiatanId');
             $table->string('Status', 30);
-            $table->foreign('PengevaluasiId')->references('Id')->on('user');
+            $table->foreign('PengevaluasiId')->references('id')->on('user');
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
             $table->foreign('Status')->references('Status')->on('kegiatan');
             //

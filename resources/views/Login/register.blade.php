@@ -23,24 +23,24 @@
         <form action="{{ route('register')}}" method="POST">
             @csrf
             <div class="mb-3 row">
-                <label for="Id">Id</label>
-                <input type="text" class="Textbox" name="Id" id="Id">
+                <label for="id">Id</label>
+                <input type="text" class="Textbox" name="id" id="id">
             </div>
             <div class="mb-3 row">
-                <label for="Username">Username</label>
-                <input type="text" class="Textbox" name="Username" id="Username">
+                <label for="username">Username</label>
+                <input type="text" class="Textbox" name="username" id="username">
             </div>
             <div class="mb-3 row">
-                <label for="Password">Password</label>
-                <input type="password" class="Textbox" name="Password" id="Password">
+                <label for="password">Password</label>
+                <input type="password" class="Textbox" name="password" id="password">
             </div>
             <div class="mb-3 row">
-                <label for="Email">Email</label>
-                <input type="email" class="Textbox" name="Email" id="Email">
+                <label for="email">Email</label>
+                <input type="email" class="Textbox" name="email" id="email">
             </div>
             <div class="mb-3 row">
-                <label for="HakAkses">HakAkses</label>
-                <select class="Textbox" name="HakAkses" id="HakAkses">
+                <label for="hakAkses">HakAkses</label>
+                <select class="Textbox" name="hakAkses" id="hakAkses">
                     <option value="Lv1">Lv1</option>
                 </select>
             </div>

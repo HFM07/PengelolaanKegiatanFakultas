@@ -53,20 +53,22 @@
             <input type="text" class="Textbox text-dark" name='Id' id="Id">
         </div>
         <div class="mb-3 row">
-            <label for="Username" class="form-label text-dark">Username</label>
-            <input type="text" class="Textbox text-dark" name='Username' id="Username">
+            <label for="username" class="form-label text-dark">Username</label>
+            <input type="text" class="Textbox text-dark" name='username' id="username">
         </div>
         <div class="mb-3 row">
-            <label for="Password" class="form-label text-dark">Password</label>
-            <input type="Password" class="Textbox text-dark" name='Password' id="Password">
+            <label for="password" class="form-label text-dark">Password</label>
+            <input type="password" class="Textbox text-dark" name='password' id="password">
         </div>
         <div class="mb-3 row">
-            <label for="Email" class="form-label text-dark">Email</label>
-            <input type="Email" class="Textbox text-dark" name='Email' id="Email">
+            <label for="email" class="form-label text-dark">Email</label>
+            <input type="email" class="Textbox text-dark" name='email' id="email">
         </div>
         <div class="mb-3 row">
-            <label for="HakAkses" class="form-label text-dark">Hak Akses</label>
-            <input type="HakAkses" class="Textbox text-dark" name='HakAkses' id="HakAkses">
+            <label for="hakAkses" class="form-label text-dark">Hak Akses</label>
+            <select class="Textbox text-dark" name="hakAkses" id="hakAkses">
+                <option value="Lv1">Lv1</option>
+            </select>
         </div>
         </div>
         <button type="submit" class="ButtonS" name="submit">Simpan</button>

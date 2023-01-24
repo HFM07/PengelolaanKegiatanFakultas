@@ -53,7 +53,7 @@
                 <label for="PengevaluasiId" class="form-label text-dark">ID Pengevaluasi</label>
                 <select name="PengevaluasiId" id="PengevaluasiId" class="Textbox text-dark">
                     @foreach ($user as $item => $i)
-                        <option value="{{ $i->Id }}">{{ $i->Id }} : {{ $i->Username }}</option>
+                        <option value="{{ $i->id }}">{{ $i->id }} : {{ $i->username }}</option>
                     @endforeach
                 </select>
             </div>

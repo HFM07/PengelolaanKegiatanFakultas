@@ -28,12 +28,12 @@
         <form action="/Login/login" method="POST">
             @csrf
             <div class="mb-3 row">
-                <label for="Username">Username</label>
-                <input type="text" class="Textbox" name="Username" id="Username" required>
+                <label for="username">Username</label>
+                <input type="text" class="Textbox" name="username" id="username" required>
             </div>
             <div class="mb-3 row">
-                <label for="Password">Password</label>
-                <input type="password" class="Textbox" name="Password" id="Password" required>
+                <label for="password">Password</label>
+                <input type="password" class="Textbox" name="password" id="password" required>
             </div>
             <button type="submit" class="ButtonS">Login</button>
             <a href="/Login/register">Belum punya akun?</a>

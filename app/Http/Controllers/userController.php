@@ -27,12 +27,12 @@ class userController extends Controller
     public function tambahUser(Request $request)
     {
         user::updateOrCreate([
-            'Id' => $request -> Id,
+            'id' => $request -> Id,
         ], [
-            'Username' => $request -> Username,
-            'Password' => bcrypt($request -> Password),
-            'Email' => $request -> Email,
-            'HakAkses' => $request -> HakAkses
+            'username' => $request -> Username,
+            'password' => bcrypt($request -> Password),
+            'email' => $request -> Email,
+            'hakAkses' => $request -> HakAkses
         ]);
         return redirect('Main/user');
     }

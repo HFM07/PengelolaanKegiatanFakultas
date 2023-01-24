@@ -63,14 +63,14 @@
                 @foreach ($user as $item => $i)
                     <tr>
                         <td>{{ $item + 1 }}</td>
-                        <td>{{ $i->Id }}</td>
-                        <td>{{ $i->Username }}</td>
-                        <td>{{ $i->Email }}</td>
-                        <td>{{ $i->Password }}</td>
-                        <td>{{ $i->HakAkses }}</td>
+                        <td>{{ $i->id }}</td>
+                        <td>{{ $i->username }}</td>
+                        <td>{{ $i->email }}</td>
+                        <td>{{ $i->password }}</td>
+                        <td>{{ $i->hakAkses }}</td>
                         <td>
-                            <a href="{{ route('user') }}/{{ $i->Id }}/getEditUser" class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
-                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Id }}"><i class="fa-solid fa-trash"></i>Hapus</a>
+                            <a href="{{ route('user') }}/{{ $i->id }}/getEditUser" class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->id }}"><i class="fa-solid fa-trash"></i>Hapus</a>
                         </td>
                     </tr>
                 @endforeach

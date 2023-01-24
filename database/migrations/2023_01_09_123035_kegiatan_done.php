@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('KegiatanId');
             $table->unsignedInteger('PengevaluasiId');
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
-            $table->foreign('PengevaluasiId')->references('Id')->on('user');
+            $table->foreign('PengevaluasiId')->references('id')->on('user');
             $table->dateTime('TglMulai');
             $table->dateTime('TglSelesai');
             $table->binary('BuktiTerlaksana');

@@ -17,11 +17,11 @@ class registerController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'Id' => 'required',
-            'Username' => 'required',
-            'Email' => 'required|email',
-            'Password' => 'required',
-            'HakAkses' => 'required'
+            'id' => 'required',
+            'username' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+            'hakAkses' => 'required'
         ]);
 
         $user = new user();
