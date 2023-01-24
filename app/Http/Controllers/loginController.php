@@ -23,7 +23,7 @@ class loginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('Main/kegiatan');
+            return redirect()->intended('Main/home');
         }
 
         return back()->with('loginError', 'Login failed');
@@ -37,6 +37,6 @@ class loginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('Login/login');
+        return redirect('/Login/login');
     }
 }

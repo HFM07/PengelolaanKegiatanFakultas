@@ -23,11 +23,14 @@ Route::get('/', function () {
 })->middleware('auth');
 
 
+Route::get('Main/home', [\App\Http\Controllers\homeController::class, 'index'])->name('home');
+
+
 Route::get('Login/register', [\App\Http\Controllers\registerController::class, 'index'])->name('register');
 Route::post('Login/register', [\App\Http\Controllers\registerController::class, 'register'])->name('register.post');
 Route::get('Login/login', [\App\Http\Controllers\loginController::class, 'index'])->name('login');
 Route::post('Login/login', [\App\Http\Controllers\loginController::class, 'login'])->name('login.post');
-Route::post('Login/logout', [\App\Http\Controllers\loginController::class, 'logout'])->name('logout');
+Route::get('Login/logout', [\App\Http\Controllers\loginController::class, 'logout'])->name('logout');
 
 
 Route::get('Main/user', [\App\Http\Controllers\userController::class, 'index'])->name('user');
