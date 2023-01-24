@@ -25,11 +25,11 @@ class registerController extends Controller
         ]);
 
         $user = new user();
-        $user->Id= $request->Id;
-        $user->Username = $request->Username;
-        $user->Email = $request->Email;
-        $user->Password = Hash::make($request->Password);
-        $user->HakAkses = $request->HakAkses;
+        $user->id= $request->id;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->hakAkses = $request->hakAkses;
         $user->save();
 
         return redirect()->route('login');
