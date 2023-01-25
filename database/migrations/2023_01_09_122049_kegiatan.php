@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('BidangKegiatan', 50);
             $table->dateTime('TglMulai')->unique();
             $table->dateTime('TglSelesai')->unique();
-            $table->string('Status', 30)->references('Status')->on('kegiatan_approval');
+            $table->string('Status', 30)->unique();
             //
         });
 

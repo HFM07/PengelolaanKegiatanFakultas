@@ -20,9 +20,10 @@ return new class extends Migration
             $table->increments('Id', 15);
             $table->unsignedInteger('PengevaluasiId');
             $table->unsignedInteger('KegiatanId');
-            $table->string('Status', 30)->unique();
+            $table->string('Status', 30);
             $table->foreign('PengevaluasiId')->references('id')->on('user');
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
+            $table->foreign('Status')->references('Status')->on('kegiatan');
             //
         });
 
