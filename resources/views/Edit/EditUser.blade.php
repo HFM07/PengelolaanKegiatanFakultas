@@ -45,28 +45,30 @@
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
-    <form action="{{ route('user.tambahUser') }}" method="POST">
-        @csrf
-        <input type="hidden" class="Textbox text-dark" name='id' id="id" value="{{$user->id}]">
-        <div class="mb-3 row">
-            <label for="username" class="form-label text-dark">Username</label>
-            <input type="username" class="Textbox text-dark" name='username' id="username">
-        </div>
-        <div class="mb-3 row">
-            <label for="password" class="form-label text-dark">Password</label>
-            <input type="password" class="Textbox text-dark" name='password' id="password">
-        </div>
-        <div class="mb-3 row">
-            <label for="email" class="form-label text-dark">Email</label>
-            <input type="email" class="Textbox text-dark" name='email' id="email">
-        </div>
-        <div class="mb-3 row">
-            <label for="hakAkses" class="form-label text-dark">Hak Akses</label>
-            <input type="hakAkses" class="Textbox text-dark" name='hakAkses' id="hakAkses">
-        </div>
-        </div>
-        <button type="submit" class="ButtonS" name="submit">Simpan</button>
-    </form>
+    <div class="container">
+        <form action="{{ route('user.tambahUser') }}" method="POST">
+            @csrf
+            <input type="hidden" class="Textbox text-dark" name='id' id="id" value="{{$user->id}]">
+            <div class="mb-3 row">
+                <label for="username" class="form-label text-dark">Username</label>
+                <input type="username" class="Textbox text-dark" name='username' id="username">
+            </div>
+            <div class="mb-3 row">
+                <label for="password" class="form-label text-dark">Password</label>
+                <input type="password" class="Textbox text-dark" name='password' id="password">
+            </div>
+            <div class="mb-3 row">
+                <label for="email" class="form-label text-dark">Email</label>
+                <input type="email" class="Textbox text-dark" name='email' id="email">
+            </div>
+            <div class="mb-3 row">
+                <label for="hakAkses" class="form-label text-dark">Hak Akses</label>
+                <input type="hakAkses" class="Textbox text-dark" name='hakAkses' id="hakAkses">
+            </div>
+            </div>
+            <button type="submit" class="ButtonS" name="submit">Simpan</button>
+        </form>
+    </div>
 </body>
 
 </html>

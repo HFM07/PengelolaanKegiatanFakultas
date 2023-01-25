@@ -45,6 +45,7 @@
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
+    <div class="container">
         <form action="{{ route('kegiatanDone.tambahKegiatanDone') }}" method="POST">
             @csrf
             <input type="hidden" class="Textbox text-dark" name='Id' id="Id" value="{{$kegiatanDone->Id}}">
@@ -86,5 +87,6 @@
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>
+    </div>
 </body>
 </html>

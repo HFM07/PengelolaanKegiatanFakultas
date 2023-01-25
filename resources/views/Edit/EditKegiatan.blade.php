@@ -45,40 +45,42 @@
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
-    <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
-        @csrf
-        <input type="hidden" class="Textbox text-dark" name="Id" id="Id" value="{{$kegiatan->Id}}">
-        <div class="mb-3 row">
-            <label for="PembuatId" class="form-label text-dark">PembuatId</label>
-            <select name="PembuatId" id="PembuatId" class="Textbox">
-                @foreach ($user as $item=>$i)
-                    <option value="{{$i->id}}">{{$i->id}} : {{$i->username}}</option>
-                @endforeach
-            </select>
-        </div>
-        <div class="mb-3 row">
-            <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
-            <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
-        </div>
-        <div class="mb-3 row">
-            <label for="BidangKegiatan" class="form-label text-dark">Bidang Kegiatan</label>
-            <input type="text" class="Textbox text-dark" name='BidangKegiatan' id="BidangKegiatan">
-        </div>
-        <div class="mb-3 row">
-            <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>
-            <input type="datetime-local" class="Textbox text-dark" name='TglMulai' id="TglMulai">
-        </div>
-        <div class="mb-3 row">
-            <label for="TglSelesai" class="col-sm-2 col-form-label text-dark">Tanggal Selesai</label>
-            <input type="datetime-local" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
-        </div>
-        <div class="mb-3 row">
-            <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
-            <input type="text" class="Textbox text-dark" name="Status" id="Status">
-        </div>
-        </div>
-        <button type="submit" class="ButtonS" name="submit">Simpan</button>
-    </form>
+    <div class="container">
+        <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
+            @csrf
+            <input type="hidden" class="Textbox text-dark" name="Id" id="Id" value="{{$kegiatan->Id}}">
+            <div class="mb-3 row">
+                <label for="PembuatId" class="form-label text-dark">PembuatId</label>
+                <select name="PembuatId" id="PembuatId" class="Textbox">
+                    @foreach ($user as $item=>$i)
+                        <option value="{{$i->id}}">{{$i->id}} : {{$i->username}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3 row">
+                <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
+                <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
+            </div>
+            <div class="mb-3 row">
+                <label for="BidangKegiatan" class="form-label text-dark">Bidang Kegiatan</label>
+                <input type="text" class="Textbox text-dark" name='BidangKegiatan' id="BidangKegiatan">
+            </div>
+            <div class="mb-3 row">
+                <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>
+                <input type="datetime-local" class="Textbox text-dark" name='TglMulai' id="TglMulai">
+            </div>
+            <div class="mb-3 row">
+                <label for="TglSelesai" class="col-sm-2 col-form-label text-dark">Tanggal Selesai</label>
+                <input type="datetime-local" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
+            </div>
+            <div class="mb-3 row">
+                <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
+                <input type="text" class="Textbox text-dark" name="Status" id="Status">
+            </div>
+            </div>
+            <button type="submit" class="ButtonS" name="submit">Simpan</button>
+        </form>
+    </div>
 </body>
 
 </html>
