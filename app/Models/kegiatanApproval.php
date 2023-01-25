@@ -31,4 +31,5 @@ class kegiatanApproval extends Model
     {
         return $this->belongsTo(user::class, 'PengevaluasiId', 'id', 'user');
     }
+    //
 }

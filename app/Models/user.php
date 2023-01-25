@@ -25,4 +25,5 @@ class user extends Authenticatable
         'email',
         'hakAkses'
     ];
+    //
 }

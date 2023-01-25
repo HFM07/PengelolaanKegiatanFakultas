@@ -33,4 +33,5 @@ class kegiatanDone extends Model
     {
         return $this->belongsTo(kegiatan::class, 'KegiatanId', 'Id', 'kegiatan');
     }
+    //
 }
