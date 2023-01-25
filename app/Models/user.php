@@ -16,7 +16,7 @@ class user extends Authenticatable
     const CREATED_AT = null;
     const UPDATED_AT = null;
 
-    protected $primaryKey='Id';
+    protected $primaryKey='id';
 
     protected $fillable = [
         'id',

@@ -26,7 +26,7 @@ class kegiatanDone extends Model
 
     public function user()
     {
-        return $this->belongsTo(user::class, 'PengevaluasiId', 'Id', 'user');
+        return $this->belongsTo(user::class, 'PengevaluasiId', 'id', 'user');
     }
 
     public function kegiatan()

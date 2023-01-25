@@ -42,5 +42,9 @@ class userController extends Controller
         $user = user::find($id);
         return view('Edit/EditUser', ['user'=>$user]);
     }
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
 }
