@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\kegiatanDone;
 use App\Models\kegiatan;
+use App\Models\kegiatanApproval;
 use App\Models\user;
 
 class kegiatanDoneController extends Controller
@@ -45,7 +46,10 @@ class kegiatanDoneController extends Controller
     public function getEditKegiatanDone($Id)
     {
         $kegiatanDone = kegiatanDone::find($Id);
-        return view('Edit/EditKegiatanDone', ['kegiatanDone'=>$kegiatanDone]);
+        $user = user::all();
+        $kegiatan = kegiatan::all();
+        $kegiatanApproval = kegiatanApproval::all();
+        return view('Edit/EditKegiatanDone', ['kegiatanDone'=>$kegiatanDone, 'kegiatanApproval'=>$kegiatanApproval, 'user'=>$user, 'kegiatan'=>$kegiatan]);
     }
 
 }

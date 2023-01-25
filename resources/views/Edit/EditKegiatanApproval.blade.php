@@ -42,6 +42,7 @@
                     <a href="/Tambah/TambahKegiatanDone">Tambah Kegiatan Done</a>
                 </div>
             </li>
+            <li><a href="/AboutUs"><i class="fa-solid fa-users"></i>About Us</a></li>
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
@@ -49,6 +50,7 @@
         <form action="{{ route('kegiatanApproval.tambahKegiatanApproval') }}" method="POST">
             @csrf
             <input type="hidden" class="Textbox text-dark" name='Id' id="Id" value="{{$kegiatanApproval->Id}}">
+            </div>
             <div class="mb-3 row">
                 <label for="PengevaluasiId" class="form-label text-dark">ID Pengevaluasi</label>
                 <select name="PengevaluasiId" id="PengevaluasiId" class="Textbox text-dark">
@@ -67,7 +69,10 @@
             </div>
             <div class="mb-3 row">
                 <label for="status" class="form-label text-dark">Status</label>
-                <input type="text" class="Textbox text-dark" name="status" id="status">
+                <select class="Textbox text-dark" name="Status" id="Status">
+                    <option value="Belum disetujui">Belum disetujui</option>
+                    <option value="Disetujui">Disetujui</option>
+                </select>
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>

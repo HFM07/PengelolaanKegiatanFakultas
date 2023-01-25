@@ -44,7 +44,9 @@ class kegiatanApprovalController extends Controller
     public function getEditKegiatanApproval($Id)
     {
         $kegiatanApproval = kegiatanApproval::find($Id);
-        return view('Edit/EditKegiatanApproval', ['kegiatan_approval'=>$kegiatanApproval]);
+        $user = user::all();
+        $kegiatan = kegiatan::all();
+        return view('Edit/EditKegiatanApproval', ['kegiatanApproval'=>$kegiatanApproval, 'user'=>$user, 'kegiatan'=>$kegiatan]);
     }
 
 }

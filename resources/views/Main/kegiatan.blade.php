@@ -43,6 +43,7 @@
                     <a href="/Tambah/TambahKegiatanDone">Tambah Kegiatan Done</a>
                 </div>
             </li>
+            <li><a href="/AboutUs"><i class="fa-solid fa-users"></i>About Us</a></li>
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
@@ -73,8 +74,10 @@
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->Status }}</td>
                         <td>
-                            <a href="{{ route('kegiatan') }}/{{ $i->Id }}/getEditKegiatan" class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
-                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Id }}"><i class="fa-solid fa-trash"></i>Hapus</a>
+                            <a href="/kegiatan/{{ $i->Id }}/getEditKegiatan"
+                                class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+                            <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Id }}"><i
+                                class="fa-solid fa-trash"></i>Hapus</a>
                         </td>
                     </tr>
                 @endforeach
@@ -117,8 +120,11 @@
                         )
                         $.ajax({
                             type: "DELETE",
-                            url: "{{ route('kegiatan') }}/" + $(this).data('Id') +
-                                "/hapus",
+                            url: "/kegiatan/" + $(this).data('id') +
+                            "/hapusKegiatan",
+                            data: {
+                                _token: "{{csrf_token()}}"
+                            },
                             success: function(response) {
                                 location.reload();
                             }

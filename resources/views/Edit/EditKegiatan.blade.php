@@ -42,6 +42,7 @@
                     <a href="/Tambah/TambahKegiatanDone">Tambah Kegiatan Done</a>
                 </div>
             </li>
+            <li><a href="/AboutUs"><i class="fa-solid fa-users"></i>About Us</a></li>
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
@@ -75,8 +76,9 @@
             </div>
             <div class="mb-3 row">
                 <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
-                <input type="text" class="Textbox text-dark" name="Status" id="Status">
-            </div>
+                <select class="Textbox text-dark" name="Status" id="Status">
+                    <option value="Belum disetujui">Belum disetujui</option>
+                </select>
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>

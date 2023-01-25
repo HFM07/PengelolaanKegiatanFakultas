@@ -46,7 +46,8 @@ class kegiatanController extends Controller
     public function getEditKegiatan($Id)
     {
         $kegiatan = kegiatan::find($Id);
-        return view('Edit/EditKegiatan', ['kegiatan'=>$kegiatan]);
+        $user = user::all();
+        return view('Edit/EditKegiatan', ['kegiatan'=>$kegiatan, 'user'=>$user]);
     }
 
 }
