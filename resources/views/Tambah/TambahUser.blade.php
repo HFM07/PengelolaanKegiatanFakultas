@@ -42,7 +42,6 @@
                     <a href="/Tambah/TambahKegiatanDone">Tambah Kegiatan Done</a>
                 </div>
             </li>
-            <li><a href="/AboutUs"><i class="fa-solid fa-users"></i>About Us</a></li>
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>

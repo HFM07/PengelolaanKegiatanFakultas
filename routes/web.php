@@ -24,7 +24,6 @@ Route::get('/', function () {
 
 
 Route::get('Main/home', [\App\Http\Controllers\homeController::class, 'index'])->name('home');
-Route::get('/AboutUs', [\App\Http\Controllers\homeController::class, 'index'])->name('aboutUs');
 
 
 Route::get('Login/register', [\App\Http\Controllers\registerController::class, 'index'])->name('register');

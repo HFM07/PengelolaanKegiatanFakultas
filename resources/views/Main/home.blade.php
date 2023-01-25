@@ -41,9 +41,21 @@
                     <a href="/Tambah/TambahKegiatanDone">Tambah Kegiatan Done</a>
                 </div>
             </li>
-            <li><a href="/AboutUs"><i class="fa-solid fa-users"></i>About Us</a></li>
             <li><a href="{{ route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="Box">
+            <h5>Detail Jobdesk:</h5>
+            <ul>
+                <li>M. Dzaki Lingga</li>
+                <li>Fauzan Nur Aziz</li>
+                <li>Habib Fauzan Mahardika</li>
+                <li>Julia Utami Endtia Putri</li>
+                <li>Muara Bagdja Al Masdoek</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

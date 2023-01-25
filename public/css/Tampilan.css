@@ -12,7 +12,6 @@ body{
     );
     backdrop-filter: blur(21px);
     -webkit-backdrop-filter: blur(21px);
-    padding: 14px;
 }
 .Menu ul{
     list-style: none;
@@ -20,7 +19,7 @@ body{
 }
 .Menu ul li{
     opacity: 0.88;
-    padding: 12px 24px;
+    padding: 12px 14px;
     background: linear-gradient(
         to bottom,
         #209cff,
@@ -48,7 +47,7 @@ body{
     float: none;
     text-decoration: none;
     position: absolute;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.925);
     z-index: 1;
 }
 .Dropdown-content a{
@@ -159,6 +158,14 @@ body{
     transform: translate(-50%, -50%);
     background: rgba(210, 210, 210, 0.25);
     border-radius: 10px;
+}
+.Box{
+    display: flex;
+    background: rgba(210, 210, 210, 0.25);
+    border-radius: 10px;
+    width:auto;
+
+    height: auto;
 }
 @media screen and (max-width:1140px) and (min-width:425px){
     .Menu li{
