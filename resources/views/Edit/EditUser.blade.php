@@ -65,7 +65,6 @@
                 <label for="hakAkses" class="form-label text-dark">Hak Akses</label>
                 <input type="hakAkses" class="Textbox text-dark" name='hakAkses' id="hakAkses">
             </div>
-            </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>
     </div>

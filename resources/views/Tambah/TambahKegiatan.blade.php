@@ -82,7 +82,6 @@
                     <option value="Belum disetujui">Belum disetujui</option>
                 </select>
             </div>
-            </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>
     </div>

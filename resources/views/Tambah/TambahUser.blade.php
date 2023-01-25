@@ -70,7 +70,6 @@
                     <option value="Lv1">Lv1</option>
                 </select>
             </div>
-            </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>
     </div>
