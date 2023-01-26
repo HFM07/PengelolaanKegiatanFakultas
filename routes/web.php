@@ -46,8 +46,8 @@ Route::group(['middleware' => ['auth', 'checkHakAkses:Lv1,Lv2']], function () {
     Route::get('Main/kegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'index'])->name('kegiatanDone');
     Route::get('Tambah/TambahKegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'tampilTambahKegiatanDone'])->name('kegiatanDone.tampilTambahKegiatanDone');
     Route::post('Tambah/TambahKegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'tambahKegiatanDone'])->name('kegiatanDone.tambahKegiatanDone');
-    Route::get('kegiatanDone/{Id}/getEditKegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'getEditKegiatanDone'])->name('kegiatanDone.getEditKegiatanDone');
-    Route::delete('kegiatanDone/{Id}/hapusKegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'hapusKegiatanDone'])->name('kegiatanDone.hapusKegiatanDone');
+    Route::get('/kegiatanDone/{Id}/getEditKegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'getEditKegiatanDone'])->name('kegiatanDone.getEditKegiatanDone');
+    Route::delete('/kegiatanDone/{Id}/hapusKegiatanDone', [\App\Http\Controllers\kegiatanDoneController::class, 'hapusKegiatanDone'])->name('kegiatanDone.hapusKegiatanDone');
 
 });
 

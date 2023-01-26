@@ -129,9 +129,11 @@
                             'success'
                         )
                         $.ajax({
-                            type: "DELETE",
-                            url: "{{ route('kegiatanDone') }}/" + $(this).data('Id') +
-                                "/hapus",
+                            url: "/kegiatanDone/" + $(this).data('id') +
+                                "/hapusKegiatanDone",
+                            data: {
+                                _token: "{{ csrf_token() }}"
+                            },
                             success: function(response) {
                                 location.reload();
                             }

@@ -40,6 +40,7 @@ class kegiatanDoneController extends Controller
             'TglSelesai'=> $request -> TglSelesai,
             'BuktiTerlaksana'=> $request -> BuktiTerlaksana
         ]);
+        
         return redirect('Main/kegiatanDone');
     }
 
