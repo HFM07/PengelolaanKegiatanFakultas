@@ -48,7 +48,7 @@
                     <a href="/Tambah/TambahKegiatanDone">Tambah Kegiatan Done</a>
                 </div>
             </li>
-            <li><a href="{{ route('logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
+            <li><a href="{{ route('logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
         </ul>
     </div>
     <div class="container">
@@ -58,8 +58,31 @@
                 {{ session('loginError') }}
             </div>
         @endif
+        <h5>Penjelasan singkat</h5>
         <div class="Box">
-            <h5>Detail Jobdesk:</h5>
+            <ul>
+                <li>Terdapat 6 menu navigasi dengan fungsi berbeda</li>
+                <li>Menu Home adalah halaman awal yang anda lihat saat ini</li>
+                <li>Menu User hanya dapat diakses oleh admin</li>
+                <li>Menu Kegiatan dapat diakses oleh semua pengguna</li>
+                <li>Menu Kegiatan Approval dapat diakses oleh staff dan admin</li>
+                <li>Menu Kegiatan Done dapat diakses oleh staff dan admin</li>
+                <li>Menu log Out dapat diakses oleh semua pengguna</li>
+            </ul>
+        </div>
+        <h5>Penjelasan mendalam</h5>
+        <div class="Box">
+            <p>Pada menu user, kegiatan dan kegiatan done terdapat fungsi tambah edit serta hapus.
+                Pada setiap menu akan menampilkan data yang berhubungan sama menu itu.
+                Contoh menu user menampilkan daftar user yang telah terdaftar pada sistem.
+                Menu yang berbeda mungkin butuh akses yang berbeda juga demi menjamin keamanan data.
+                Pada dasarnya setiap user hanya bisa mendapat hak akses dasar saja.
+                Jika anda ingin hak akses lebih tinggi untuk mengakses lebih banyak menu anda hanya dapat mendapatkanya,
+                jika sudah mendapatkan izin dari admin.
+            </p>
+        </div>
+        <h5>Anggota dan jobdesk</h5>
+        <div class="Box">
             <ul>
                 <li>M. Dzaki Lingga sebagai Backend</li>
                 - Mengurus controller
