@@ -59,7 +59,7 @@
                 {{ session('loginError') }}
             </div>
         @endif
-        <h5>Daftar Kegiatan yang terdaftar</h5>
+        <h5>Kegiatan yang terdaftar</h5>
         <table class="table table-hover table-striped table-bordered">
             <thead class="Thead">
                 <tr>

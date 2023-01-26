@@ -143,11 +143,15 @@ body{
     position: relative;
     background-color: transparent;
     border-style: solid;
-    border-width: 0px 0px 1px 0px;
+    border-width: 0px 0px 2px 0px;
     border-color: #4facfe;
     outline: 0;
     height: 30px;
     width: 100%;;
+}
+.Textbox:focus{
+    border-color: #f09819;
+    transition: 0.5s;
 }
 .LoginBox{
     position: absolute;
