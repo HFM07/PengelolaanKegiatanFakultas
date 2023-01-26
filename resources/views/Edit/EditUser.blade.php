@@ -65,7 +65,11 @@
             </div>
             <div class="mb-3 row">
                 <label for="hakAkses" class="form-label text-dark">Hak Akses</label>
-                <input type="hakAkses" class="Textbox text-dark" name='hakAkses' id="hakAkses">
+                <select class="Textbox text-dark" name="hakAkses" id="hakAkses">
+                    <option value="Lv1">Lv1</option>
+                    <option value="Lv2">Lv2</option>
+                    <option value="Lv3">Lv3</option>
+                </select>
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>
