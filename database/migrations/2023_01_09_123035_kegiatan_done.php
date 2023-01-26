@@ -21,11 +21,9 @@ return new class extends Migration
             $table->unsignedInteger('PengevaluasiId');
             $table->foreign('KegiatanId')->references('Id')->on('kegiatan');
             $table->foreign('PengevaluasiId')->references('id')->on('user');
-            $table->dateTime('TglMulai');
-            $table->dateTime('TglSelesai');
+            $table->date('TglMulai');
+            $table->date('TglSelesai');
             $table->binary('BuktiTerlaksana');
-            $table->foreign('TglMulai')->references('TglMulai')->on('kegiatan');
-            $table->foreign('TglSelesai')->references('TglSelesai')->on('kegiatan');
             //
         });
 
