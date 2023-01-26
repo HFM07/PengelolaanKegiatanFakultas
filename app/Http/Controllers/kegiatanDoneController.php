@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\kegiatanDone;
 use App\Models\kegiatan;
@@ -30,6 +30,8 @@ class kegiatanDoneController extends Controller
 
     public function tambahKegiatanDone(Request $request)
     {
+        $image = $request -> BuktiTerlaksana;
+        $images = $request -> input('BuktiTerlaksana');
         kegiatanDone::updateOrCreate([
             'Id'=> $request -> Id,
         ], [
@@ -37,9 +39,9 @@ class kegiatanDoneController extends Controller
             'PengevaluasiId'=> $request -> PengevaluasiId,
             'TglMulai'=> $request -> TglMulai,
             'TglSelesai'=> $request -> TglSelesai,
-            'BuktiTerlaksana'=> $request -> BuktiTerlaksana
+            'BuktiTerlaksana'=> $image
         ]);
-
+        Storage::disk('public') -> put('bukti/'.$image, $images);
         return redirect('Main/kegiatanDone');
     }
 
