@@ -20,6 +20,6 @@ class CheckHakAkses
         if (Auth::check() && in_array(Auth::user()->hakAkses, $roles)) {
             return $next($request);
         }
-        return redirect('/Login/login')->with('loginError','You are not allowed to access this page');
+        return back()->with('loginError','You are not allowed to access this page');
     }
 }
