@@ -19,7 +19,6 @@ class kegiatanApprovalController extends Controller
     public function hapusKegiatanApproval($Id)
     {
         kegiatanApproval::destroy($Id);
-        return redirect("Main/kegiatanApproval");
     }
 
     public function tampilTambahKegiatanApproval()

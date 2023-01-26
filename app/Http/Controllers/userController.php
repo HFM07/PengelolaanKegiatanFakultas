@@ -16,7 +16,6 @@ class userController extends Controller
     public function hapusUser($id)
     {
         user::destroy($id);
-        return redirect("Main/user");
     }
 
     public function tampilTambahUser()

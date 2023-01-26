@@ -32,7 +32,6 @@ Route::get('Login/logout', [\App\Http\Controllers\loginController::class, 'logou
 // Route khusus Admin, Staff dan User
 Route::group(['middleware' => ['auth', 'checkHakAkses:Lv1,Lv2,Lv3']], function () {
     Route::get('Main/home', [\App\Http\Controllers\homeController::class, 'index'])->name('home');
-    Route::get('/AboutUs', [\App\Http\Controllers\homeController::class, 'index'])->name('aboutUs');
 });
 
 // Route khusus Staf dan Admin

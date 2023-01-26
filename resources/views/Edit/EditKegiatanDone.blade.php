@@ -83,8 +83,8 @@
                 </select>
             </div>
             <div class="mb-3 row">
-                <label for="bukti_terlaksana" class="form-label text-dark">Bukti Terlaksana</label>
-                <input type="file" class="Textbox text-dark" name="bukti_terlaksana" id="bukti_terlaksana">
+                <label for="BuktiTerlaksana" class="form-label text-dark">Bukti Terlaksana</label>
+                <input type="file" class="Textbox text-dark" name="BuktiTerlaksana" id="BuktiTerlaksana">
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>
         </form>

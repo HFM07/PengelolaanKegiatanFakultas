@@ -19,7 +19,6 @@ class kegiatanDoneController extends Controller
     public function hapusKegiatanDone($Id)
     {
         kegiatanDone::destroy($Id);
-        return redirect("Main/user");
     }
 
     public function tampilTambahKegiatanDone()
@@ -40,7 +39,7 @@ class kegiatanDoneController extends Controller
             'TglSelesai'=> $request -> TglSelesai,
             'BuktiTerlaksana'=> $request -> BuktiTerlaksana
         ]);
-        
+
         return redirect('Main/kegiatanDone');
     }
 

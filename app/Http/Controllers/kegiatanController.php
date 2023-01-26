@@ -19,7 +19,6 @@ class kegiatanController extends Controller
     public function hapusKegiatan($Id)
     {
         kegiatan::destroy($Id);
-        return redirect("Main/kegiatan");
     }
 
     public function tampilTambahKegiatan()

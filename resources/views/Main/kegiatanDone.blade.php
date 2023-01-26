@@ -85,7 +85,7 @@
                         <td>{{ $i->TglSelesai }}</td>
                         <td>{{ $i->BuktiTerlaksana }}</td>
                         <td>
-                            <a href="{{ route('kegiatanDone') }}/{{ $i->Id }}/getEditKegiatanDone"
+                            <a href="/kegiatanDone/{{ $i->Id }}/getEditKegiatanDone"
                                 class="ButtonS"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
                             <a href="javascript:void(0)" class="ButtonH" data-id="{{ $i->Id }}"><i
                                     class="fa-solid fa-trash"></i>Hapus</a>
@@ -129,6 +129,7 @@
                             'success'
                         )
                         $.ajax({
+                            type: "DELETE",
                             url: "/kegiatanDone/" + $(this).data('id') +
                                 "/hapusKegiatanDone",
                             data: {
