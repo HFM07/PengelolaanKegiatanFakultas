@@ -54,11 +54,13 @@
         </ul>
     </div>
     <div class="container">
+        <br><br><br>
         @if (session('loginError'))
             <div class="alert alert-danger">
                 {{ session('loginError') }}
             </div>
         @endif
+        <h5>Daftar Kegiatan yang telah terlaksana</h5>
         <table class="table table-hover table-striped table-bordered">
             <thead class="Thead">
                 <tr>

@@ -20,6 +20,7 @@
 
 <body>
     <div class="LoginBox">
+        <h5>Register</h5><br>
         <form action="{{ route('register')}}" method="POST">
             @csrf
             <div class="mb-3 row">

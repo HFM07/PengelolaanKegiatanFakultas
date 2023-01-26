@@ -52,8 +52,8 @@
             <li><a href="{{ route('logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </div>
-    <br>
     <div class="container">
+        <br><br><br><br>
         @if (session('loginError'))
             <div class="alert alert-danger">
                 {{ session('loginError') }}
