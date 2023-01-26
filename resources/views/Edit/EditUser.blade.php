@@ -47,6 +47,7 @@
         </ul>
     </div>
     <div class="container">
+        <br><br><h5>Edit User</h5>
         <form action="{{ route('user.tambahUser') }}" method="POST">
             @csrf
             <input type="hidden" class="Textbox text-dark" name='id' id="id" value="{{$user->id}]">

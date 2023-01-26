@@ -46,6 +46,7 @@
         </ul>
     </div>
     <div class="container">
+        <br><br><h5>Tambah Kegiatan Approval</h5>
         <form action="{{ route('kegiatanApproval.tambahKegiatanApproval') }}" method="POST">
             @csrf
             <div class="mb-3 row">

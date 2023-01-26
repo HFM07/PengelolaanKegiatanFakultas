@@ -47,6 +47,7 @@
         </ul>
     </div>
     <div class="container">
+        <br><br><h5>Edit Kegiatan Approval</h5>
         <form action="{{ route('kegiatanApproval.tambahKegiatanApproval') }}" method="POST">
             @csrf
             <input type="hidden" class="Textbox text-dark" name='Id' id="Id" value="{{$kegiatanApproval->Id}}">
