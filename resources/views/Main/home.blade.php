@@ -66,11 +66,14 @@
                 - Mengurus controller
                 <li>Fauzan Nur Aziz sebagai Frontend</li>
                 - Mengurus login dan register serta menu home <br>
-                - Mengurus menu edit pada setiap bagian
+                - Mengurus logut <br>
+                - Mengurus menu edit pada setiap bagian <br>
+                - Mengurus hak akses
                 <li>Habib Fauzan Mahardika sebagai Backend dan Frontend</li>
                 - Mengurus kesalahan dan kekurangan pada Frontend dan Backend <br>
                 - Mengurus tampilan website <br>
-                - Mengurus migration, model dan routes
+                - Mengurus migration, model dan routes <br>
+                - Mengurus hak akses
                 <li>Julia Utami Endtia Putri sebagai Frontend</li>
                 - Mengurus menu utama pada setiap bagian
                 <li>Muara Bagdja Al Masdoek sebagai Frontend</li>
