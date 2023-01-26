@@ -24,8 +24,6 @@ return new class extends Migration
             $table->date('TglMulai');
             $table->date('TglSelesai');
             $table->binary('BuktiTerlaksana');
-            $table->foreign('TglMulai')->references('TglMulai')->on('kegiatan');
-            $table->foreign('TglSelesai')->references('TglSelesai')->on('kegiatan');
             //
         });
 
