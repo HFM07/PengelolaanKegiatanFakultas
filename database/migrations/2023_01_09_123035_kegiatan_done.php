@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreign('PengevaluasiId')->references('id')->on('user');
             $table->date('TglMulai');
             $table->date('TglSelesai');
-            $table->binary('BuktiTerlaksana');
+            $table->string('BuktiTerlaksana', 255);
             //
         });
 
