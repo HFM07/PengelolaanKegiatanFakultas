@@ -20,7 +20,7 @@
 
 <body>
     <div class="LoginBox">
-        <h5 align="center">login</h5><br>
+        <h5 align="center">Login</h5><br>
         @if (session('loginError'))
             <div class="alert alert-danger">
                 {{ session ('loginError')}}
