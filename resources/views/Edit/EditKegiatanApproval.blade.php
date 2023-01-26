@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kegiatan Approval</title>
+    <title>Kegiatan</title>
     <link rel="stylesheet" href="{{ asset('css/Tampilan.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
         integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -32,7 +32,6 @@
             </li>
             <li class="Dropdown"><a href="javascript:void(0)" class="DropButton"><i class="fa-regular fa-calendar-check"></i>Kegiatan Approval</a>
                 <div class="Dropdown-content">
-                    <a href="/Main/kegiatanApproval">Daftar Kegiatan Approval</a>
                     <a href="/Tambah/TambahKegiatanApproval">Tambah Kegiatan Approval</a>
                 </div>
             </li>
@@ -46,32 +45,38 @@
         </ul>
     </div>
     <div class="container">
-        <br><br><h5>Edit Kegiatan Approval</h5>
-        <form action="{{ route('kegiatanApproval.tambahKegiatanApproval') }}" method="POST">
+        <br><br><h5>Edit Kegiatan</h5>
+        <form action="{{ route('kegiatan.tambahKegiatan') }}" method="POST">
             @csrf
-            <input type="hidden" class="Textbox text-dark" name='Id' id="Id" value="{{$kegiatanApproval->Id}}">
-            </div>
+            <input type="hidden" class="Textbox text-dark" name="Id" id="Id" value="{{$kegiatan->Id}}">
             <div class="mb-3 row">
-                <label for="PengevaluasiId" class="form-label text-dark">ID Pengevaluasi</label>
-                <select name="PengevaluasiId" id="PengevaluasiId" class="Textbox text-dark">
-                    @foreach ($user as $item => $i)
-                        <option value="{{ $i->id }}">{{ $i->id }} : {{ $i->username }}</option>
+                <label for="PembuatId" class="form-label text-dark">PembuatId</label>
+                <select name="PembuatId" id="PembuatId" class="Textbox">
+                    @foreach ($user as $item=>$i)
+                        <option value="{{$i->id}}">{{$i->id}} : {{$i->username}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="mb-3 row">
-                <label for="KegiatanId" class="form-label text-dark">ID Kegiatan</label>
-                <select name="KegiatanId" id="KegiatanId" class="Textbox text-dark">
-                    @foreach ($kegiatan as $item => $i)
-                        <option value="{{ $i->Id }}">{{ $i->Id }} : {{ $i->NamaKegiatan }}</option>
-                    @endforeach
-                </select>
+                <label for="NamaKegiatan" class="form-label text-dark">Nama Kegiatan</label>
+                <input type="text" class="Textbox text-dark" name='NamaKegiatan' id="NamaKegiatan">
             </div>
             <div class="mb-3 row">
-                <label for="status" class="form-label text-dark">Status</label>
+                <label for="BidangKegiatan" class="form-label text-dark">Bidang Kegiatan</label>
+                <input type="text" class="Textbox text-dark" name='BidangKegiatan' id="BidangKegiatan">
+            </div>
+            <div class="mb-3 row">
+                <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>
+                <input type="datetime-local" class="Textbox text-dark" name='TglMulai' id="TglMulai">
+            </div>
+            <div class="mb-3 row">
+                <label for="TglSelesai" class="col-sm-2 col-form-label text-dark">Tanggal Selesai</label>
+                <input type="datetime-local" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
+            </div>
+            <div class="mb-3 row">
+                <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
                 <select class="Textbox text-dark" name="Status" id="Status">
                     <option value="Belum disetujui">Belum disetujui</option>
-                    <option value="Disetujui">Disetujui</option>
                 </select>
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>

@@ -51,7 +51,7 @@ Route::group(['middleware' => ['auth', 'checkHakAkses:Lv1,Lv2']], function () {
 });
 
 // Route khusus User dan Admin
-Route::group(['middleware' => ['auth', 'checkHakAkses:Lv1,Lv3']], function () {
+Route::group(['middleware' => ['auth', 'checkHakAkses:Lv1,Lv2,Lv3']], function () {
     Route::get('Main/kegiatan', [\App\Http\Controllers\kegiatanController::class, 'index'])->name('kegiatan');
     Route::get('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanController::class, 'tampilTambahKegiatan'])->name('kegiatan.tampilTambahKegiatan');
     Route::post('Tambah/TambahKegiatan', [\App\Http\Controllers\kegiatanController::class, 'tambahKegiatan'])->name('kegiatan.tambahKegiatan');

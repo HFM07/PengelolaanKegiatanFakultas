@@ -38,7 +38,6 @@
             <li class="Dropdown"><a href="javascript:void(0)" class="DropButton"><i
                         class="fa-regular fa-calendar-check"></i>Kegiatan Approval</a>
                 <div class="Dropdown-content">
-                    <a href="/Main/kegiatanApproval">Daftar Kegiatan Approval</a>
                     <a href="/Tambah/TambahKegiatanApproval">Tambah Kegiatan Approval</a>
                 </div>
             </li>
@@ -78,17 +77,16 @@
             </div>
             <div class="mb-3 row">
                 <label for="TglMulai" class="col-sm-2 col-form-label text-dark">Tanggal Mulai</label>
-                <input type="date" class="Textbox text-dark" name='TglMulai' id="TglMulai">
+                <input type="datetime-local" class="Textbox text-dark" name='TglMulai' id="TglMulai">
             </div>
             <div class="mb-3 row">
                 <label for="TglSelesai" class="col-sm-2 col-form-label text-dark">Tanggal Selesai</label>
-                <input type="date" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
+                <input type="datetime-local" class="Textbox text-dark" name='TglSelesai' id="TglSelesai">
             </div>
             <div class="mb-3 row">
                 <label for="Status" class="col-sm-2 col-form-label text-dark">Status</label>
                 <select class="Textbox text-dark" name="Status" id="Status">
                     <option value="Belum disetujui">Belum disetujui</option>
-                    <option value="Disetujui">Disetujui</option>
                 </select>
             </div>
             <button type="submit" class="ButtonS" name="submit">Simpan</button>

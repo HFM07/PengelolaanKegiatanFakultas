@@ -48,8 +48,7 @@ class kegiatanDoneController extends Controller
         $kegiatanDone = kegiatanDone::find($Id);
         $user = user::all();
         $kegiatan = kegiatan::all();
-        $kegiatanApproval = kegiatanApproval::all();
-        return view('Edit/EditKegiatanDone', ['kegiatanDone'=>$kegiatanDone, 'kegiatanApproval'=>$kegiatanApproval, 'user'=>$user, 'kegiatan'=>$kegiatan]);
+        return view('Edit/EditKegiatanDone', ['kegiatanDone'=>$kegiatanDone, 'user'=>$user, 'kegiatan'=>$kegiatan]);
     }
 
 }

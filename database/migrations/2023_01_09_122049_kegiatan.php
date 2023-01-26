@@ -21,8 +21,8 @@ return new class extends Migration
             $table->foreign('PembuatId')->references('id')->on('user');
             $table->string('NamaKegiatan', 50);
             $table->string('BidangKegiatan', 50);
-            $table->date('TglMulai');
-            $table->date('TglSelesai');
+            $table->dateTime('TglMulai');
+            $table->dateTime('TglSelesai');
             $table->string('Status', 30);
             //
         });
