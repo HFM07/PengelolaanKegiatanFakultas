@@ -41,7 +41,7 @@
             <div class="mb-3 row">
                 <label for="hakAkses">HakAkses</label>
                 <select class="Textbox" name="hakAkses" id="hakAkses">
-                    <option value="Lv1">Lv1</option>
+                    <option value="Lv3">Lv3</option>
                 </select>
             </div>
             <button type="submit" class="ButtonS">Daftar</button>
